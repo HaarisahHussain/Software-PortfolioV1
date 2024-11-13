@@ -1,3 +1,4 @@
+/* Custom Fonts*/
 @font-face {
     font-family: 'Custom' ;
     src: url(/fonts/ConsolaMono-Bold.ttf);
@@ -6,23 +7,28 @@
     font-family: 'Logo';
     src: url(/fonts/magic_retro/Magic\ Retro.ttf);
 }
+@font-face {
+    font-family: "Header-Txt";
+    src: url(/fonts/rosalia/Rosalia.otf);
+}
 
+/* Adding styling that would be applied to every page*/
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Custom', sans-serif;
+   
 }
+
+/*Basic Body and Header Styling*/
 body{ 
     height: 100vh;
     display:flex;
     align-items: center;
     justify-content: center;
-    background: #FF46A2;
+    background: white;
     color:black;
 }
-
-
 
 #header{
     width:100%;
@@ -33,7 +39,7 @@ body{
 }
 
 
-
+/*Styling so that responsive nav bar changes as window size changes*/
 section{
     background: url(images/MainPageBackground.jpg) no repeat;
     background-size:cover;
@@ -50,10 +56,11 @@ label.logo{
 }
 
 nav{
+    font-family: 'Custom', sans-serif;
     background: #ffbfe0 ;
     height:80px;
     width: 100%
-
+    
 }
 
 nav ul{
@@ -82,7 +89,7 @@ a.active,a:hover {
 
 .checkbtn{
     font-size: 30px;
-    color:white;
+    color:bla;
     float:right;
     line-height:80px;
     margin-right: 40px; 
@@ -111,7 +118,7 @@ a.active,a:hover {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #FF46A2;
+        background: #ffbfe0 ;
         top: 80px;
         left: -100%;
         text-align: center;
@@ -133,4 +140,35 @@ a.active,a:hover {
         left:0;
     }
 
+}
+
+/* Header Text */
+/* Adding auto type feature to header text and styling the colour of it.*/
+.header-text{
+    margin-top:20%;
+    font-size: 30px;
+    font-family: 'Header-Txt', sans-serif;
+    text-align: center;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top:20px;
+    text-align: center;
+}
+
+.auto-type{
+    color: #c46a99 ;
+}
+
+/* Social media icons styling.*/
+/* Margin added to header to create space between text and icons.*/
+ion-icon{
+    color:rgb(190, 95, 162);
+    font-size: 30px;
+    margin-top: 10px;
+}
+    
+#header .social-links {
+    margin-top: 10px;
 }
