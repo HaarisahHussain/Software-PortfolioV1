@@ -1,0 +1,40 @@
+
+<footer>
+  <ul class="social-links">
+    <a href="https://github.com/HaarisahHussain" target="blank" class="github">
+      <ion-icon name="logo-github"></ion-icon></a>
+      <a href="https://www.linkedin.com/in/haarisah-hussain-2ba850315/" target="blank" class="Linkedin">
+      <ion-icon name="logo-linkedin"></ion-icon></a>
+
+      <ul class="footer-menu">
+        <li><a href="#">About</a></li>
+        <li><a href="#">My Projects</a></li>
+        <li><a href="#">Contact</a></li>
+
+        
+      </ul>
+
+
+
+
+      <div class="footerCopyright">
+        <p>Copyright &copy;2024; Designed by Haarisah Hussain <span class="Designer"></span></p>
+        </div>
+ </ul>
+</footer>
+
+/* Social media icons styling.*/
+/* Margin added to header to create space between text and icons.*/
+ion-icon{
+    color:rgb(190, 95, 162);
+    font-size: 30px;
+    margin-top: 10px;
+}
+    
+#header .social-links {
+    margin-top: 10px;
+}
+
+
+
+

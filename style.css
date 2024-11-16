@@ -1,7 +1,7 @@
 /* Custom Fonts*/
 @font-face {
     font-family: 'Custom' ;
-    src: url(/fonts/ConsolaMono-Bold.ttf);
+    src: url(/fonts/Hey\ Comic.ttf)
 }
 @font-face {
     font-family: 'Logo';
@@ -16,159 +16,113 @@
 *{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
-   
 }
 
 /*Basic Body and Header Styling*/
 body{ 
-    height: 100vh;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    color:black;
+    font-family: sans-serif; 
+    text-align:center;
 }
 
-#header{
+/*Creating a wrapper for background header section*/
+.wrapper{
+    width: 90%;
+    margin:0 auto;
+
+}
+
+header {
     width:100%;
-    height: 100vh;
-    background-image: url(images/MainPageBackground.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-
-/*Styling so that responsive nav bar changes as window size changes*/
-section{
-    background: url(images/MainPageBackground.jpg) no repeat;
-    background-size:cover;
-    height: calc(100vh - 80px);
-}
-
-/* Nav Bar Styling*/
-label.logo{
-    color: black;
-    font-size:40px;
-    line-height:80px;
-    padding:0 100px;
-    font-family: 'Logo', sans-serif;
-}
-
-nav{
-    font-family: 'Custom', sans-serif;
-    background: #ffbfe0 ;
-    height:80px;
-    width: 100%
-    
-}
-
-nav ul{
-    float:right;
-    margin-right:20px;
-}
-
-nav ul li{
-    display: inline-block;
-    line-height:80px;
-    margin: 0 5px;
-}
-
-nav ul li a{
-    color: black;
-    font-size: 17px;
-    text-transform: uppercase; 
-    padding: 7px 13px;
-    border-radius: 3px;
-}
-
-a.active,a:hover {
+    height: 100px;
     background: white;
-    transition: 3s;
+    position: fixed;
 }
 
-.checkbtn{
-    font-size: 30px;
-    color:bla;
+.logo{
+    float:left; 
+    width:30%;
+    text-align: left;
+    line-height:100px;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'Logo', serif;
+    color: black;
+
+}
+
+/*Created nav bar and added styling to it*/
+nav{
     float:right;
-    line-height:80px;
-    margin-right: 40px; 
-    cursor: pointer;
+    line-height:100px;
+    margin-right: 20px;
 }
 
-#check{
-    display: none;
+nav a {
+    text-decoration: none;
+    font-family: 'Custom', serif;
+    font-size: 20px;
+    color: black;
+    padding: 36px 10px;
+    margin: 0 1px;
 }
 
-@media (max-width: 952px){
-    label.logo{
-        font: size 30px;
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
+/*Created banner area*/
+.banner-area{
+    background-image: url(images/MainPageBackground.jpg);
+    background-size:cover;
+    background-position: center center;
+    top: 100px;
+    height: 100vh;
+    width:100%;
+    position:fixed;
 }
 
-@media (max-width: 858px){
-    .checkbtn{
-        display: block;
-    }
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #ffbfe0 ;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .3s;
-    }
-    nav ul li{
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a{
-        font-size: 20px;
-    }
-    a.hover,a.active{
-        background:none;
-        color: white;
-    }
-    #check:checked ~ ul{
-        left:0;
-    }
-
+.banner-area :after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    display: block;
+    width:100%;
+    height:100%;
 }
 
-/* Header Text */
-/* Adding auto type feature to header text and styling the colour of it.*/
-.header-text{
-    margin-top:20%;
-    font-size: 30px;
-    font-family: 'Header-Txt', sans-serif;
-    text-align: center;
-}
-
-.header-text h1{
+/*Adding styling for banner area header and paragraph*/
+.banner-area h2{
+    padding-top: 8%;
     font-size: 60px;
-    margin-top:20px;
-    text-align: center;
+    color:black; 
+    font-family: 'Header-Txt', sans-serif;
 }
 
+.banner-area p{
+    font-size: 25px;
+    font-family: 'Custom' ;
+}
+
+/*Creating main content area */
+.content-area{
+    width:100%;
+    height: 800px;
+    position: relative;
+    background: white;
+    top:600px;
+    text-align: justify;
+}
+
+/* Adding styling to content area */
+.content-area h1{
+    text-align: center;
+    font-size: 60px;
+    color:black; 
+    font-family: 'Header-Txt', sans-serif;
+}
+
+/*Adding styling to auto-type text*/
 .auto-type{
     color: #c46a99 ;
 }
 
-/* Social media icons styling.*/
-/* Margin added to header to create space between text and icons.*/
-ion-icon{
-    color:rgb(190, 95, 162);
-    font-size: 30px;
-    margin-top: 10px;
-}
-    
-#header .social-links {
-    margin-top: 10px;
-}
