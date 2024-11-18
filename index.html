@@ -13,8 +13,8 @@
   <body>
     <!--======= Header =====-->
     <!--======= I created Nav links and div containers =====-->
+  <header>
   <div class="box-area">
-      <header>
           <div class="wrapper"></div>
             <div class="logo">
               <a href="#">Haarisah</a>
@@ -32,20 +32,65 @@
     <p>I'm an <span class="auto-type"></span> with a passion for digitial and tech'</p>     
   </div>
 
-    <!--======= Main Content Area for text =====-->
+    <!--======= Main Content Area for text (About) =====-->
   <div class="content-area">
     <div class="wrapper">
-      <h1>About Me</h1>
+        <div id="about">
+          <div class="container">
+            <div class = "row">
+                <div class="about-col-1">
+                    <h1 class="sub-title"> About Me </h1>
+                    <p class="about-me-text"> Hi! I am an aspiring software developer who enjoys solving problems and has a strong interest in expanding my knowledge.
+                      I am someone who views bugs as puzzles and coding as an opportunity to build something with purpose. 
+                      I enjoy taking on the challenge of transforming intricate problems into refined solutions, 
+                      whether it involves delving into a new technology or working with others. I can't wait to keep learning new things and developing my experience.
+                      My curiosity, creativity, and eagerness to learn guide me, and I'm constantly looking for ways to contribute and make a positive difference 🧠 </p>
+                     </div>
+                     
+                      <!--======= Skills Section =====-->
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                          <li><span>Web Development</span><br>HTML & CSS</li>
+                          <li><span>Programming</span><br>Python, JavaScript, 
+                            Visual Basic.NET, C++</li>
+                          <li><span> Frameworks </span><br> Django</li>
+                        </ul>
+                     </div>
 
+                     <!--=== Education Section====== -->
+                     <div class="tab-contents" id="Education">
+                      <ul>
+                        <li><span> 2022-2024 </span><br> Solihull Sixth Form College,<br>
+                        Triple Distinction* in Level 3 National Diplomaa in<br>
+                        Information technology</li>
+                        <li><span> 2017-2022 </span><br> Swanshurst School (9 GSCES), 
+                          Maths (5), English (6)</li>
+                      </ul>
+                   </div>
+
+
+
+            </div>
+          </div>
+        </div>
     </div>
   </div>
   </div>
-  
+
+
+
+
+
+
   <!--Script for text animation on page-->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   <script class="textanimation">
     var typed = new Typed(".auto-type", {
-        strings: ["Aspiring Software Engineer"],
+        strings: ["Aspiring Software Developer"],
         typeSpeed: 150,
         backSpeed: 150,
         loop: true
@@ -56,6 +101,26 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!--======= Last thing to do is create footer for index page. =====-->
+
+<!--======= JavaScript Script for the clicking of "Skills" & "Education" to make text appear underneath =====-->
+<script>
+
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+
+  }
+</script>
+
+
  </body>
 </html>

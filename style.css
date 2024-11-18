@@ -1,4 +1,4 @@
-/* Custom Fonts*/
+/*----- Custom Fonts ------*/
 @font-face {
     font-family: 'Custom' ;
     src: url(/fonts/Hey\ Comic.ttf)
@@ -12,19 +12,20 @@
     src: url(/fonts/rosalia/Rosalia.otf);
 }
 
-/* Adding styling that would be applied to every page*/
+/*----- Adding styling that would be applied to every page----*/
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/*Basic Body and Header Styling*/
+/*-----Basic Body and Header Styling----*/
 body{ 
     font-family: sans-serif; 
     text-align:center;
 }
 
-/*Creating a wrapper for background header section*/
+/*-----Creating a wrapper for background header section-----*/
 .wrapper{
     width: 90%;
     margin:0 auto;
@@ -53,7 +54,7 @@ header {
 
 }
 
-/*Created nav bar and added styling to it*/
+/*------- Created nav bar and added styling to it ------- */
 nav{
     float:right;
     line-height:100px;
@@ -69,7 +70,7 @@ nav a {
     margin: 0 1px;
 }
 
-/*Created banner area*/
+/*---- Created banner area----- */
 .banner-area{
     background-image: url(images/MainPageBackground.jpg);
     background-size:cover;
@@ -82,7 +83,7 @@ nav a {
 
 .banner-area :after{
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left:0;
     display: block;
@@ -90,7 +91,7 @@ nav a {
     height:100%;
 }
 
-/*Adding styling for banner area header and paragraph*/
+/*----- Adding styling for banner area header and paragraph -------*/
 .banner-area h2{
     padding-top: 8%;
     font-size: 60px;
@@ -103,7 +104,7 @@ nav a {
     font-family: 'Custom' ;
 }
 
-/*Creating main content area */
+/*------- Creating main content area ------*/
 .content-area{
     width:100%;
     height: 800px;
@@ -113,16 +114,103 @@ nav a {
     text-align: justify;
 }
 
-/* Adding styling to content area */
-.content-area h1{
+
+/*------- Adding styling to auto-type text --------*/
+.auto-type{
+    color: #c46a99;
+}
+
+
+/*----- About -----*/
+/*----- This includes the styling of the "Skills" and "Education" sections by -----*/
+/*-----  Using their relevant classnames and id to add styling to the text and the underline underneath -----*/
+
+#about{
+    padding: 80px 0;
+    color: black;
+}
+
+.row{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sub-title{
     text-align: center;
+    color:black;
     font-size: 60px;
-    color:black; 
     font-family: 'Header-Txt', sans-serif;
 }
 
-/*Adding styling to auto-type text*/
-.auto-type{
-    color: #c46a99 ;
+.about-me-text{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    color:black;
+    opacity: 85%;
+    font-size: 22px;
+    font-family: 'Custom', sans-serif;
+
+}
+.tab-titles{
+    display: flex;
+    margin:20px 0 40px;
 }
 
+.tab-links{
+    margin-top: 2%;
+    margin-left: 26%;
+    font-size: 39px;
+    font-weight: 500;
+    font-family: 'Header-Txt', serif;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width:0;
+    height: 3px;
+    background: #c46a99;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin:10px 0;
+    font-family: 'Custom', sans-serif;
+    font-size: 20px;
+    margin-left: 26%;
+    
+}
+
+#Education.tab-contents ul li{
+    list-style: none;
+    margin:10px 0;
+    font-family: 'Custom', sans-serif;
+    font-size: 20px;
+    margin-left: 58%;
+    
+}
+
+
+.tab-contents ul li span{
+    color: #c46a99;
+    font-size: 23px;
+    font-family: 'Custom', sans-serif;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}

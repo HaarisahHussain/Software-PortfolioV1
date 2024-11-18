@@ -1,27 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Haarisah Portfolio</title>
 
-<footer>
-  <ul class="social-links">
-    <a href="https://github.com/HaarisahHussain" target="blank" class="github">
-      <ion-icon name="logo-github"></ion-icon></a>
-      <a href="https://www.linkedin.com/in/haarisah-hussain-2ba850315/" target="blank" class="Linkedin">
-      <ion-icon name="logo-linkedin"></ion-icon></a>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
 
-      <ul class="footer-menu">
-        <li><a href="#">About</a></li>
-        <li><a href="#">My Projects</a></li>
-        <li><a href="#">Contact</a></li>
+  <body>
+    <!--======= Header =====-->
+    <!--======= I created Nav links and div containers =====-->
+  <div class="box-area">
+      <header>
+          <div class="wrapper"></div>
+            <div class="logo">
+              <a href="#">Haarisah</a>
+            </div>
+          <nav>
+              <a class= "active" href="#">About</a>
+              <a href="#">My Projects</a>
+              <a href="#">Contact</a>
+         </nav>
+  </header>
 
-        
-      </ul>
+  <!--=======  Banner-Header area with auto-type feature =====-->
+  <div class="banner-area">
+    <h2>Haarisah Hussain</h2>
+    <p>I'm an <span class="auto-type"></span> with a passion for digitial and tech'</p>     
+  </div>
+
+    <!--======= Main Content Area for text =====-->
+  <div class="content-area">
+    <div class="wrapper">
+      <h1>About Me</h1>
+
+    </div>
+  </div>
+  </div>
+
+    <!--======= Last thing to do is create footer for index page. =====-->
+    <footer>
+      <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
 
 
 
 
-      <div class="footerCopyright">
-        <p>Copyright &copy;2024; Designed by Haarisah Hussain <span class="Designer"></span></p>
-        </div>
- </ul>
-</footer>
+
+
+  <!--Script for text animation on page-->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script class="textanimation">
+    var typed = new Typed(".auto-type", {
+        strings: ["Aspiring Software Engineer"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true
+    })
+  </script>
+
+<!--Scripts for social media icons on page-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+ </body>
+</html>
+
 
 /* Social media icons styling.*/
 /* Margin added to header to create space between text and icons.*/
