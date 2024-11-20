@@ -1,15 +1,15 @@
 /*----- Custom Fonts ------*/
 @font-face {
     font-family: 'Custom' ;
-    src: url(/fonts/Hey\ Comic.ttf)
+    src: url(/assets/fnt/Hey\ Comic.ttf);
 }
 @font-face {
     font-family: 'Logo';
-    src: url(/fonts/magic_retro/Magic\ Retro.ttf);
+    src: url(/assets/fnt/magic_retro/Magic\ Retro.ttf);
 }
 @font-face {
     font-family: "Header-Txt";
-    src: url(/fonts/rosalia/Rosalia.otf);
+    src: url(/assets/fnt/rosalia/Rosalia.otf);
 }
 
 /*----- Adding styling that would be applied to every page----*/
@@ -85,7 +85,7 @@ nav a.active {
 }
 /*---- Created banner area----- */
 .banner-area{
-    background-image: url(images/MainPageBackground.jpg);
+    background-image: url(/assets/img/MainPageBackground.jpg);
     background-size:cover;
     background-position: center center;
     top: 100px;
