@@ -26,15 +26,14 @@ body{
 }
 
 
-
-header {
+#header {
     width:100%;
-    height: 100px;
-    background: white;
-    position: fixed;
-    z-index: 100;
-  
-    
+    height: 100vh;
+}
+
+
+.container{
+    padding: 10px 10px;
 }
 
 /*------- Styling Logo ------- */
@@ -76,44 +75,67 @@ nav a:hover,
 nav a.active {
     color: #c46a99;
 
- 
-}
-/*---- Created banner area----- */
-.banner-area{
-    background-image: url(/assets/img/MainPageBackground.jpg);
-    background-size:cover;
-    background-position: center center;
-    top: 100px;
-    height: 35vh;
-    width:100%;
-    position:fixed;
 }
 
-.banner-area :after{
-    content: '';
-    position: fixed;
-    top: 0;
-    left:0;
-    display: block;
-    width:100%;
-    height:100%;
+/*------- Header Text Styling------- */
+
+.header-text h1{
+    margin-top: 7%;
+    font-size: 40px;
+    font-family: "Header-Txt", serif ;
 }
 
-/*----- Adding styling for banner area header and paragraph -------*/
-.banner-area h2{
-    padding-top: 8%;
-    font-size: 60px;
-    color:black; 
-    font-family: 'Header-Txt', sans-serif;
+
+.header-text span{
+  color: #c46a99;
 }
 
-/*------- Creating main content area ------*/
-.content-area{
-    width:100%;
-    height: 800px;
-    position: relative;
-    background: white;
-    top: 500px;
-    text-align: justify;
+.header-text p{
+    font-size: 25px;
+    font-family: "Custom", serif ;
 }
+
+/*------- Main content area ------ */
+
+/*------- FlexBox ------- */
+
+/*------- Grid ------- */
+
+.flex-container{
+    display: flex;
+}
+   
+.BattleShip {
+    width: 1900px;
+    height: 400px;
+    margin-top: 3%;
+    background-color: #cecece;
+
+}
+
+
+/*------- Styling section for text ------- */
+
+.BattleShip h1{
+    text-align: left;
+    font-family: 'Header-Txt', serif;
+    font-size: 40px;
+}
+
+.BattleShip p{
+    margin-top: 1%;
+    text-align: left;
+    font-family: 'Custom', serif;
+    font-size: 25px;
+}
+
+.icons{
+    color:black;
+    font-size: 40px;
+    margin-top: 10%;
+    margin-left: 90%;
+}
+    
+
+
 

@@ -7,6 +7,12 @@
     <title>My Projects</title>
 
     <link rel="stylesheet" href="assets/css/My-Projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!-- PyScript CSS -->
+     <link rel="stylesheet" href="https://pyscript.net/releases/2024.2.1/core.css">
+     <!-- This script tag bootstraps PyScript -->
+     <script type="module" src="https://pyscript.net/releases/2024.2.1/core.js"></script>
 
     <!--======= favicon icon =====-->
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicomatic/apple-touch-icon-57x57.png" />
@@ -30,45 +36,68 @@
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
 
   <body>
     <!--======= Header =====-->
     <!--======= I created Nav links and div containers =====-->
-<header>
-  <div class="box-area">
-    <div class="wrapper"></div>
-      <div class="logo">
-        <a href="#">Haarisah</a>
-      </div>
-    <nav>
+<div id="header">
+  <div class="container">
+    <div class="logo">
+      <a href="#">Haarisah</a>
+    </div>
+    <ul>
+      <nav>
         <a href="index.html">About</a>
-        <a href="My-Projects.html" class="active">My Projects</a>
-        <a href="contact.html">Contact</a></li>
+        <a href="My-Projects.html" class="active">My Projects</a> 
+        <a href="contact.html">Contact</a>
+    </ul>
    </nav>
 
+   <div class="header-text">
+    <h1> <em>My Personal </em> <span>Projects</span></h1>
+    <p>This page contains projects I have done in school and in my own time.</p>
+   </div>
 
-</div> 
+    <div class="flex-container"></div>
+      <div class="BattleShip" style="opacity: 1;">
+        <h1>Battleships Game</h1><p>The BattleShip game is a classic board game is the classic game of naval combat that brings together competition, strategy, and excitement!
+          In head-to-head battle, 2 players search for the enemy's fleet of ships and destroys them one by one. I created this board-game, but in python. </p>
+          <div class="icons">
+            <a href="https://github.com/HaarisahHussain/BattleShips-game"><ion-icon name="logo-github"></ion-icon></a>
+            <a href=""></a><ion-icon name="share-outline"></ion-icon>
+          </div>
+      </div>
+  
+
+          
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+   
+  </div>
 </div>
-</div>
-</header>
+
+<!--Scripts for social media icons on page-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>
+
    
 
     
 
-  <!--=======  Banner-Header area with auto-type feature =====-->
-  <div class="banner-area">
-    <h2>Projects</h2>
-  </div>
-
-    <!--======= Main Content Area for text (About) =====-->
-  <div class="content-area">
-        <div id="about">
-          <div class="container">
-            <div class = "row">
-                <div class="about-col-1">
-                    <h1 class="sub-title">  </h1>
-                    <p class="about-me-text">  </p>
-                     </div>
-                     
