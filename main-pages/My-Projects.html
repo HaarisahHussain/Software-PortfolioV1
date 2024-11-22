@@ -56,18 +56,44 @@
    </div>
 
     <div class="flex-container"></div>
-      <div class="BattleShip" style="opacity: 1;">
+      <div class="flexbox-item BattleShip " style="opacity: 1;">
         <h1>Battleships Game</h1><p>The BattleShip game is a classic board game is the classic game of naval combat that brings together competition, strategy, and excitement!
           In head-to-head battle, 2 players search for the enemy's fleet of ships and destroys them one by one. I created this board-game, but in python. </p>
           <div class="icons">
             <a href="https://github.com/HaarisahHussain/BattleShips-game"><ion-icon name="logo-github"></ion-icon></a>
-            <a href="/Games-Apps/BattleShips.html"><ion-icon name="share-outline"></ion-icon></a>
-          </div>
+              <!-- BattleShips Profile -->
+              <button class="show-profile-btn">🖱️</button>
+
+              <!-- Modal structure -->
+              <div class="modal-overlay" id="modalOverlay">
+                <div class="modal-content">
+                  <button class="close-btn" id="closeBtn">&times;</button>
+                  <video width="1000"  controls><source src="/assets/img/video/battleship-demo.mp4" type="video/mp4"></video>
+                </div>
+            </div>
+            <!-- End of battleships-->
+
       </div>
-  
+      </div>
 
-          
-  
+      <div class="flex-container"></div>
+      <div class="flexbox-item ASCII-Dice " style="opacity: 1;">
+        <h1>Battleships Game</h1><p>The BattleShip game is a classic board game is the classic game of naval combat that brings together competition, strategy, and excitement!
+          In head-to-head battle, 2 players search for the enemy's fleet of ships and destroys them one by one. I created this board-game, but in python. </p>
+          <div class="icons-ascii">
+            <a href="https://github.com/HaarisahHussain/BattleShips-game"><ion-icon name="logo-github"></ion-icon></a>
+
+              <!-- BattleShips Profile -->
+              <button class="show-profile-btn">🖱️</button>
+
+              <!-- Modal structure -->
+              <div class="modal-overlay" id="modalOverlay">
+                <div class="modal-content">
+                  <button class="close-btn" id="closeBtn">&times;</button>
+                 
+                </div>
+            </div>
+            <!-- End of battleships-->
 
 
 
@@ -75,18 +101,17 @@
 
 
 
-
-  
-  
+      </div>
 
 
-   
-  </div>
-</div>
+    
 
 <!--Scripts for social media icons on page-->
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!--Scripts for button profile on page -->
+<script src="/assets/js/My-Projects.js"></script>
 
 
 </body>
