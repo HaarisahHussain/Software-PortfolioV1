@@ -47,3 +47,26 @@
  });
 
 
+
+    // JavaScript to handle modal display
+    const showProfileBtnUserApps = document.querySelector('.show-profile-btn-UserInputApps');
+    const modalOverlayUserApps = document.getElementById('modalOverlayUserApps');
+    const closeBtnUserApps = document.getElementById('closeBtnUserApps');
+   
+    // Show the modal when the button is clicked
+    showProfileBtnUserApps.addEventListener('click', () => {
+      modalOverlayUserApps.style.display = 'flex'; // Show the modal
+    });
+   
+    // Hide the modal when the close button is clicked
+    closeBtnUserApps.addEventListener('click', () => {
+      modalOverlayUserApps.style.display = 'none'; // Hide the modal
+    });
+   
+    // Hide the modal when clicking outside of it
+    modalOverlayUserApps.addEventListener('click', (event) => {
+      if (event.target === modalOverlayUserApps) {
+        modalOverlayUserApps.style.display = 'none';
+      }
+    });
+   
