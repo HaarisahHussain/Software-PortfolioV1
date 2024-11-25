@@ -1,3 +1,4 @@
+
 /*----- Custom Fonts ------*/
 @font-face {
     font-family: 'Custom' ;
@@ -12,37 +13,87 @@
     src: url(/assets/fnt/rosalia/Rosalia.otf);
 }
 
-/*----- Adding styling that would be applied to every page----*/
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/*-----Basic Body and Header Styling----*/
-body{ 
-    font-family: sans-serif; 
-    text-align:center;
-}
 
-/*-----Creating a wrapper for background header section-----*/
-.wrapper{
-    width: 90%;
-    margin:0 auto;
-
-}
-
-header {
-    width:100%;
-    height: 100px;
-    background: white;
-    position: fixed;
-    z-index: 100;
+/* style.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   
-    
-}
+  
+  .intro-container {
+    top: 100px;
+    height: 100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px;
+    background-color: #f7f7f7;
+  }
 
-/*------- Styling Logo ------- */
+  
+  /* Intro container text styling */
+  h1 {
+    margin: 0;
+    font-size: 50px;
+    font-family: 'Header-Txt', serif;
+  }
+  
+  #subtext {
+    margin-top: 20px;
+    font-size: 25px;
+    color: black;
+    font-family: 'Custom', sans-serif;
+  }
+
+  #scroll {
+    margin-top: 20px;
+    font-size: 20px;
+    color: black;
+    font-family: 'Custom', sans-serif;
+  }
+  
+  
+  .content-container {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initially shifted down */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+    padding: 40px;
+    background-color: #fff;
+    color: black; /* Correct color value */
+  }
+
+  
+  .content-container.show {
+    opacity: 1; /* Show when scrolled into view */
+    transform: translateY(0); /* Reset position */
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  /*------- Styling Logo ------- */
 .logo{
     float:left; 
     width:30%;
@@ -59,194 +110,36 @@ header {
 }
 
 /*------- Created nav bar and added styling to it ------- */
-nav{
-    float:right;
-    line-height:100px;
-    margin-right: 20px;
-}
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Distribute space between logo and nav */
+    align-items: center; /* Align items vertically in the center */
+    padding: 10px 20px; /* Add some padding to the navbar */
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1000; /* Make sure it stays on top of other elements */
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
 
 nav a {
-    text-decoration: none;
+    margin-left: 20px; /* Space between nav items */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark color for text */
     font-family: 'Custom', serif;
-    font-size: 27px;
-    color: black;
-    padding: 36px 10px;
-    margin: 0 1px;
-    transition: .3s;
+    font-size: 25px; /* Slightly larger font size for readability */
+    transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
 /*------- Adding Hover to Nav Bar Text ------- */
 
 nav a:hover, 
 nav a.active {
-    color: #c46a99;
+    color: #fff; /* White text color on hover */
+    background-color: #c46a99; /* Blue background color on hover */
+    padding: 5px 10px; /* Add padding to hover effect */
+    border-radius: 5px; /* Round corners of the hover effect *
 
- 
-}
-/*---- Created banner area----- */
-.banner-area{
-    background-image: url(/assets/img/MainPageBackground.jpg);
-    background-size:cover;
-    background-position: center center;
-    top: 100px;
-    height: 100vh;
-    width:100%;
-    position:fixed;
-}
-
-.banner-area :after{
-    content: '';
-    position: fixed;
-    top: 0;
-    left:0;
-    display: block;
-    width:100%;
-    height:100%;
-}
-
-/*----- Adding styling for banner area header and paragraph -------*/
-.banner-area h2{
-    padding-top: 8%;
-    font-size: 60px;
-    color:black; 
-    font-family: 'Header-Txt', sans-serif;
-}
-
-.banner-area p{
-    font-size: 25px;
-    font-family: 'Custom' ;
-}
-
-/*------- Creating main content area ------*/
-.content-area{
-    width:100%;
-    height: 800px;
-    position: relative;
-    background: white;
-    top:600px;
-    text-align: justify;
-}
-
-
-/*------- Adding styling to auto-type text --------*/
-.auto-type{
-    color: #c46a99;
-}
-
-
-/*----- About -----*/
-/*----- This includes the styling of the "Skills" and "Education" sections by -----*/
-/*-----  Using their relevant classnames and id to add styling to the text and the underline underneath -----*/
-
-#about{
-    padding: 80px 0;
-    color: black;
-}
-
-.row{
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.sub-title{
-    text-align: center;
-    color:black;
-    font-size: 60px;
-    font-family: 'Header-Txt', sans-serif;
-    padding-bottom: 2%;
-}
-
-.about-me-text{
-    margin-top: 25px;
-    margin-bottom: 25px;
-    text-align: center;
-    color:black;
-    opacity: 85%;
-    font-size: 22px;
-    font-family: 'Custom', sans-serif;
-    transition: 1s ease;
 
 }
 
 
-.about-me-text--visible{
-    opacity: 1;
 
-}
-
-
-.tab-titles{
-    display: flex;
-    margin:20px 0 40px;
-}
-
-.tab-links{
-    margin-top: 2%;
-    margin-left: 26%;
-    font-size: 39px;
-    font-weight: 500;
-    font-family: 'Header-Txt', serif;
-    cursor: pointer;
-    position: relative;
-}
-
-.tab-links::after{
-    content: '';
-    width:0;
-    height: 3px;
-    background: #c46a99;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: .5s;
-
-}
-
-.tab-links.active-link::after{
-    width: 50%;
-}
-
-.tab-contents ul li{
-    list-style: none;
-    margin:10px 0;
-    font-family: 'Custom', sans-serif;
-    font-size: 20px;
-    margin-left: 26%;
-    
-}
-
-#Education.tab-contents ul li{
-    list-style: none;
-    margin:10px 0;
-    font-family: 'Custom', sans-serif;
-    font-size: 20px;
-    margin-left: 58%;
-    
-}
-
-
-.tab-contents ul li span{
-    color: #c46a99;
-    font-size: 23px;
-    font-family: 'Custom', sans-serif;
-}
-
-/*-----  Adding an animation so that text fades in when relevant text is clicked on. -----*/
-.tab-contents{
-    display: none;
-    animation: fade-in .3s ease-in; 
-}
-
-@keyframes fade-in{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-    
-}
-
-.tab-contents.active-tab{
-    display: block;
-}

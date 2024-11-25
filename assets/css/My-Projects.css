@@ -1,533 +1,309 @@
 /*----- Custom Fonts ------*/
 @font-face {
-    font-family: 'Custom' ;
-    src: url(/assets/fnt/Hey\ Comic.ttf);
+  font-family: 'Custom' ;
+  src: url(/assets/fnt/Hey\ Comic.ttf);
 }
 @font-face {
-    font-family: 'Logo';
-    src: url(/assets/fnt/magic_retro/Magic\ Retro.ttf);
+  font-family: 'Logo';
+  src: url(/assets/fnt/magic_retro/Magic\ Retro.ttf);
 }
 @font-face {
-    font-family: "Header-Txt";
-    src: url(/assets/fnt/rosalia/Rosalia.otf);
+  font-family: "Header-Txt";
+  src: url(/assets/fnt/rosalia/Rosalia.otf);
 }
 
 
-/*-----Basic Body and Header Styling----*/
-body{ 
-    font-family: sans-serif; 
-    text-align:center;
-    position: relative;
 
+
+/* Body and container styling */
+html,body{
+  height: 100%;
+  margin:0;
 }
 
-html{
-  overflow-y: scroll; overflow-x:hidden;
-
-}
-
-
-#header {
-    width:100%;
-    height: 100vh;
+.container {
+  padding: 10px 10px;
 }
 
 
-.container{
-    padding: 10px 10px;
+
+/* Particle Styling */
+#particles-js {
+  position: fixed; /* Fix the particles to the screen */
+  top: 0;
+  left: 0;
+  width: 100vw;  /* Ensure it covers the full viewport width */
+  height: 100vh; /* Ensure it covers the full viewport height */
+  z-index: -1; /* Keep it behind all content */
+
 }
+
+
 
 /*------- Styling Logo ------- */
 .logo{
-    float:left; 
-    width:30%;
-    text-align: left;
-    line-height:100px;
+  float:left; 
+  width:30%;
+  text-align: left;
+  line-height:100px;
 }
 
 .logo a{
-    text-decoration: none;
-    font-size: 40px;
-    font-family: 'Logo', serif;
-    color: black;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: 'Logo', serif;
+  color: black;
 
 }
+
+
 
 /*------- Created nav bar and added styling to it ------- */
 nav{
-    float:right;
-    line-height:100px;
-    margin-right: 20px;
+  float:right;
+  line-height:100px;
+  margin-right: 20px;
 }
 
 nav a {
-    text-decoration: none;
-    font-family: 'Custom', serif;
-    font-size: 27px;
-    color: black;
-    padding: 36px 10px;
-    margin: 0 1px;
-    transition: .3s;
+  text-decoration: none;
+  font-family: 'Custom', serif;
+  font-size: 27px;
+  color: black;
+  padding: 36px 10px;
+  margin: 0 1px;
+  transition: .3s;
 }
 
 /*------- Adding Hover to Nav Bar Text ------- */
 
 nav a:hover, 
 nav a.active {
-    color: #c46a99;
+  color: #c46a99;
 
 
 }
-/*------- Header Text Styling------- */
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
 
 .header-text h1{
-    margin-top: 7%;
-    font-size: 40px;
-    font-family: "Header-Txt", serif ;
-    height: 100px;
+  text-align: center;
+  margin-top: 7%;
+  font-size: 40px;
+  font-family: "Header-Txt", serif ;
+  height: 100px;
 }
 
 
 .header-text span{
-  color: #c46a99;
+color: #c46a99;
 }
 
 .header-text p{
-    font-size: 25px;
-    font-family: "Custom", serif ;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Custom", serif ;
 }
 
-/*------- Main content area ------ */
+/* Flexbox layout for content */
+/* Glow Effect on Flexboxes */
+.flex-container- {
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content: space-between;
+  gap: 3px;
+  margin-top: 3%
+}
 
-/*------- FlexBox ------- */
+.flex-child:hover {
+  box-shadow: 0 0 25px  #c46a99; /* Glowing effect on hover */
+}
 
-/*------- Grid ------- */
+/* Flex item styling */
+.flex-child {
+  margin-left: 1%;
+  margin-top: 2%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  border: outset;
+  box-shadow: 0 0 15px #c46a99; /* Glow effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
 
-.grid-container-1 {
+.flex-child h1 {
+  font-family: 'Header-Txt', serif;
+  font-size: 40px;
+  margin-top: 1%
+}
+
+button {
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+
+/* Flex individual styling */
+
+
+
+
+
+
+
+/* end  styling */
+
+/* Modal Styling */
+.modal-overlay, 
+.modal-overlayAscii, 
+.modal-overlayUserApps {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal content styling */
+.modal-content, 
+.modal-contentAscii, 
+.modal-contentUserApps {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.modal-content video, 
+.modal-contentAscii img, 
+.modal-contentUserApps img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Close buttons for modals */
+.close-btn, 
+.close-btnAscii, 
+.close-btn-UserApps {
+  background-color: transparent;
+  color: #333;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-btn:hover, 
+.close-btnAscii:hover, 
+.close-btn-UserApps:hover {
+  color: #f44336;
+}
+
+/* Profile button (the buttons to open modals) */
+.show-profile-btn, 
+.show-profile-btn-UserInputApps, 
+.show-profile-btnAscii {
+  background-color: white;
+  color: black;
+  font-size: 30px;
+  margin-top: 5%;
+  display: inline-flex; /* Use flexbox for alignment */
+  align-items: center;  /* Vertically align content */
+  justify-content: center; /* Horizontally align content */
+  width: 50px;          /* Set a fixed width for both */
+  height: 50px;         /* Set a fixed height for both */
+  border: none;         /* Remove any border */
+  border-radius: 50%;    /* Make circular shape */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for floating effect */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+.show-profile-btn:hover, 
+.show-profile-btn-UserInputApps:hover, 
+.show-profile-btn-StringSplittingApps:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.show-profile-btn:active, 
+.show-profile-btn-UserInputApps:active, 
+.show-profile-btnAscii:active {
+  background-color: #e0e0e0; /* Darker background on click */
+}
+
+/* Icons styling inside buttons */
+.show-profile-btn ion-icon, 
+.show-profile-btn-UserInputApps ion-icon,
+.show-profile-btnAscii ion-icon, 
+  .icons a {
+    font-size: 24px; /* Adjust icon size */
+    color: #333;     /* Set the icon color */
+    display: inline-flex; /* Ensures the icon stays aligned inside the button */
+    justify-content: center;
+    align-items: center;
+
+  }
+
+
+
+
+
+/* Icons links inside .icons */
+.icons a {
+  color: black;
+  font-size: 30px;
+  display: inline-flex; /* Align icon correctly */
+  align-items: center;  /* Center the icon vertically */
+  justify-content: center; /* Center the icon horizontally */
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: #fff;
+  border-radius: 50%;
+  text-decoration: none; /* Remove link underline */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.icons a:hover {
+  background-color: #f0f0f0; /* Hover background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover shadow */
+}
+
+.icons a:active {
+  background-color: #e0e0e0; /* Active background color */
+}
+
+/* Modal Overlay when visible */
+.modal-overlay.show, 
+.modal-overlayAscii.show, 
+.modal-overlayUserApps.show {
   display: flex;
 }
 
-.grid-container-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2px;
+/* Modal content animation */
+.modal-overlay .modal-content, 
+.modal-overlayAscii .modal-contentAscii, 
+.modal-overlayUserApps .modal-contentUserApps {
+  animation: modalIn 0.3s ease-in-out;
 }
-
-
-
-
-
-
-
-/*------- Styling battleship section  text ------- */
-
-.BattleShip{
-    margin-left: 5%;
-    margin-top: 3%;
-    border: outset;
-}
-
-.BattleShip h1{
-    text-align: left;
-    font-family: 'Header-Txt', serif;
-    font-size: 40px;
-}
-
-.BattleShip p{
-    margin-top: 1%;
-    text-align: left;
-    font-family: 'Custom', serif;
-    font-size: 25px;
-}
-
-/*------- Styling icons ------- */
-.icons{
-    margin-top: 3%;
-    font-size: 30px;
-    text-align: right;
-    
-    
-    }
-    
-  .icons a {
-        color: black;
-   }
-
-    
-  /* Button styling */
-
-  .show-profile-btn {
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 30px;
-  }
-
- 
-
-  /* Modal overlay */
-  .modal-overlay {
-    display: none; /* Initially hidden */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Modal content */
-  .modal-content {
-    width: 1100px;
-    padding: 50px;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-  }
-
-  .modal-content img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-  }
-
-  .modal-content h2 {
-    margin: 10px 0 5px;
-    font-size: 1.5em;
-  }
-
-  .modal-content p {
-    font-size: 0.9em;
-  }
-
-  /* Close button */
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-    
-
-
-
-
-
-
-/*------- Styling ASCII-Dice section  text ------- */
-
-.grid-child-1{
-  margin-left: 5%;
-
-}
-
-.ASCII-Art{
-    margin-top: 1%;
-    height: 255px;
-    width: 870px;
-    border: outset;
-
-}
-
-/*------- Styling  section text ------- */
-
-
-.ASCII-Art{
-  text-align: left;
-  font-family: 'Header-Txt', serif;
-  font-size: 19px;
-}
-
-.ASCII-Art p{
-  text-align: left;
-  font-family: 'Custom', serif;
-  font-size: 20px;
-}
-
-/*------- Styling icons ------- */
-.ascii-github{
-    margin-top: 3%;
-    margin-left: 89%;
-    font-size: 30px;
-    color: black;
-    
-    
-}
- /* Button styling */
-
- .show-profile-btnAscii {
-    background-color:white;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 30px;
-  }
-
-    /* Modal overlay */
-    .modal-overlayAscii {
-      display: none; /* Initially hidden */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Modal content */
-    .modal-contentAscii{
-      width: 700px;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      text-align: center;
-      position: relative;
-    }
-
-    .modal-contentAscii img {
-      margin-top: 2%;
-      width: 600px;
-      height: 400px;
- 
-    }
-
-    .modal-contentAscii h2 {
-      margin: 10px 0 5px;
-      font-size: 1.5em;
-    }
-
-    .modal-content p {
-      color: #666;
-      font-size: 0.9em;
-    }
-
-    /* Close button */
-    .close-btnAscii {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: none;
-      border: none;
-      font-size: 1.5em;
-      cursor: pointer;
-    }
-
- 
-
-/*------- Styling User Input Apps text and flexbox styling------- */
-
-.UserInputApps{
-  margin-top: 3%;
- height: 270px;
-  border: outset;
-
-}
-
-/*------- Styling section for text ------- */
-
-
-.UserInputApps{
-  text-align: left;
-  font-family: 'Header-Txt', serif;
-  font-size: 19px;
-  margin-left: 5%;
-}
-
-.UserInputApps p{
-  text-align: left;
-  font-family: 'Custom', serif;
-  font-size: 20px;
-}
-
-/*------- Styling icons ------- */
-.github{
-  margin-top: 3%;
-  margin-left: 75%;
-  font-size: 30px;
-  color: black;
-  
-  
-}
-
-
- /* Button styling */
-
- .show-profile-btn-UserInputApps {
-    background-color:white;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 30px;
-  }
-
-    /* Modal overlay */
-    .modal-overlayUserApps {
-      display: none; /* Initially hidden */
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Modal content */
-    .modal-contentUserApps{
-      width: 700px;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      text-align: center;
-      position: relative;
-    }
-
-    .modal-contentUserApps img {
-      margin-top: 2%;
-      width: 600px;
-      height: 400px;
- 
-    }
-
-    .modal-content-UserInputApps h2 {
-      margin: 10px 0 5px;
-      font-size: 1.5em;
-    }
-
-    .modal-UserInputApps p {
-      color: #666;
-      font-size: 0.9em;
-    }
-
-    /* Close button */
-    .close-btn-UserApps {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: none;
-      border: none;
-      font-size: 1.5em;
-      cursor: pointer;
-    }
-
-  
-  
-  
-/*------- Styling String Splitting Application and grid styling------- */
-
-.String-Splitting-Apps{
-  margin-left: 4%;
-  margin-top: 4%;
-  height:289px;
-  width: 400px;
-  border: outset;
-  
-  }
-  
-  /*------- Styling section for text ------- */
-  
-  
-  .String-Splitting-Apps h1{
-    text-align: left;
-    font-family: 'Header-Txt', serif;
-    font-size: 30px;
-    margin-left: 2%;
-  }
-  
-  .String-Splitting-Apps p{
-    text-align: left;
-    font-family: 'Custom', serif;
-    font-size: 20px;
-  }
-  
-  /*------- Styling icons ------- */
-  .github{
-    margin-top: 3%;
-    margin-left: 75%;
-    font-size: 30px;
-    color: black;
-    
-    
-  }
-  
-  
-   /* Button styling */
-  
-   .show-profile-btn-StringSplittingApps {
-      background-color:white;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 30px;
-    }
-  
-      /* Modal overlay */
-      .modal-overlay-StringSplittingApps  {
-        display: none; /* Initially hidden */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        justify-content: center;
-        align-items: center;
-      }
-  
-      /* Modal content */
-      .modal-content-StringSplittingApps {
-        width: 700px;
-        padding: 20px;
-        background: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        text-align: center;
-        position: relative;
-      }
-  
-      .modal-content-StringSplittingApps  img {
-        margin-top: 2%;
-        width: 600px;
-        height: 400px;
-   
-      }
-  
-      .modal-content-StringSplittingApps  h2 {
-        margin: 10px 0 5px;
-        font-size: 1.5em;
-      }
-  
-      .modal-StringSplittingApps  p {
-        color: #666;
-        font-size: 0.9em;
-      }
-  
-      /* Close button */
-      .close-btn-StringSplittingApps  {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
-        border: none;
-        font-size: 1.5em;
-        cursor: pointer;
-      }
-  
- 
