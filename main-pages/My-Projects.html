@@ -42,16 +42,16 @@
     <!--======= Header =====-->
     <div id="header">
       <div class="container">
-        <div class="logo">
-          <a href="#">Haarisah</a>
-        </div>
-        <ul>
+        <div class="navbar">
+          <div class="logo">
+            <a href="#">Haarisah</a>
+          </div>
           <nav>
-            <a href="index.html">About</a>
-            <a href="My-Projects.html" class="active">My Projects</a>
+            <a href="index.html" >About</a>
+            <a href="" class="active">My Projects</a>
             <a href="contact.html">Contact</a>
           </nav>
-        </ul>
+        </div>
   
         <div class="header-text">
           <h1> <em>My Personal </em> <span>Projects</span></h1>
@@ -82,24 +82,42 @@
       </div>
   
       <!-- ASCII Art -->
-      <div class="grid-child-1 ASCII-Art">
-        <div class=" flex-child Ascii-Art">
-          <h1>ASCII Art</h1>
-          <p>This program is a simple terminal program..aaaaaaaaaaaaaaaaaaaaaaaaaaaaa </p>
-      
-          <div class="icons">
-          <a href="https://github.com/HaarisahHussain/BattleShips-game"><ion-icon name="logo-github"></ion-icon></a>
-          <button class="show-profile-btnAscii" onclick="openModal('modalOverlay')">🖱️</button>
-        </div>
-          
-        </div>
-     
+        
+    <!-- ASCII Art -->
+    <div class="flex-child ASCII-Art">
+      <h1>ASCII Art</h1>
+      <p>This program displays a pattern using ASCII characters.</p>
+      <div class="icons">
+           <a href=""><ion-icon class="github" name="logo-github"></ion-icon></a>
+        <button class="show-profile-btnAscii" onclick="openAsciiModal()">🖱️</button>
       </div>
+    </div>
+     
+
   
       <!-- User Input Apps -->
-      <div class="grid-child-2 UserInputApps">
-        <div class=" flex-child  UserInput">
+      <div class="flex-child UserInputApps">
         <h1>User Input Apps</h1>
+        <p>These programs demonstrate my knowledge of user input.. .</p>
+        <div class="icons">
+          <a href=""><ion-icon class="github" name="logo-github"></ion-icon></a>
+          <button class="show-profile-btn-UserInputApps" onclick="openModal('modalOverlayUserApps')">🖱️</button>
+        </div>
+      </div>
+
+      
+      <!-- String Splitting Apps -->
+      <div class="flex-child StringSplittingApps">
+        <h1>String Splitting Apps</h1>
+        <p>These programs demonstrate my knowledge of user input.. .</p>
+        <div class="icons">
+          <a href=""><ion-icon class="github" name="logo-github"></ion-icon></a>
+          <button class="show-profile-btn-UserInputApps" onclick="openModal('modalOverlayUserApps')">🖱️</button>
+        </div>
+      </div>
+
+      <div class="flex-child StringSplittingApps">
+        <h1>String Splitting Apps</h1>
         <p>These programs demonstrate my knowledge of user input.. .</p>
         <div class="icons">
           <a href=""><ion-icon class="github" name="logo-github"></ion-icon></a>
@@ -108,7 +126,13 @@
       </div>
     </div>
 
+
+    </div>
+
+    </div>
     
+
+  </div>
 
 
 
@@ -121,9 +145,27 @@
       <div class="modal-overlay" id="modalOverlay">
         <div class="modal-content">
           <button class="close-btn" onclick="closeModal('modalOverlay')">&times;</button>
-          <video width="990" height="490" controls>
-            <source src="/assets/img/video/battleship-demo.mp4" type="video/mp4">
-          </video>
+    
+          <!-- BattleShip Game Container Inside Modal -->
+          <div id="game-container">
+            <div id="game-info">
+              <p>Number of ships remaining: <span id="ships-left">2</span></p>
+              <p>Bullets left: <span id="bullets-left">50</span></p>
+            </div>
+    
+            <div id="grid-container"></div>
+    
+            <div id="input-container">
+              <label for="row">Row (A-J):</label>
+              <input type="text" id="row" maxlength="1" placeholder="A-J">
+              <label for="col">Column (0-9):</label>
+              <input type="number" id="col" min="0" max="9" placeholder="0-9">
+              <button id="shoot-button" onclick="shoot()">Shoot!</button>
+            </div>
+    
+            <div id="message"></div>
+          </div>
+    
         </div>
       </div>
     </section>
@@ -133,8 +175,12 @@
       <div class="modal-overlayAscii" id="modalOverlayAscii">
         <div class="modal-contentAscii">
           <button class="close-btnAscii" onclick="closeModal('modalOverlayAscii')">&times;</button>
-          <p>The output below displays a "H" using ASCII numbers and letters.</p>
-          <img src="/assets/img/ASCII_Art.png" alt="Profile Picture">
+         
+          <div id="ascii-art-container">
+            <h2>ASCII Art Pattern</h2>
+            <pre id="ascii-output"></pre> <!-- Where the pattern will be displayed -->
+          </div>
+
         </div>
       </div>
     </section>
@@ -145,7 +191,6 @@
       <div class="modal-overlayUserApps" id="modalOverlayUserApps">
         <div class="modal-contentUserApps">
           <button class="close-btn-UserApps" id="closeBtnUserApps">&times;</button>
-          <p>The below videos are two examples of how I have used user input for calculation purposes.</p>
           
           <!-- Add Input Fields for User -->
           <label for="diameter">Enter the diameter of the circle:</label>
@@ -170,8 +215,14 @@
  <!-- Scripts -->
  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
- <script src="/assets/js/My-Projects.js"></script>
+
+
+ <script src="/assets/js/games/My-Projects.js"></script>
+ <script src="/assets/js/games/Battleships.js"></script>
+ <script src="/assets/js/games/ASCII-Art.js"></script>
+
  <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/4.7.0/xterm.min.js"></script>
+ 
  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.0"></script>
  <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.0"></script> <!-- tsParticles CDN -->
 <script src="/assets/js/ts-particles.js"></script>

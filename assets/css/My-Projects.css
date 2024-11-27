@@ -15,29 +15,31 @@
 
 
 
-/* Body and container styling */
-html,body{
-  height: 100%;
-  margin:0;
+/* Ensuring the page is scrollable */
+html, body {
+  height: 100%; /* Ensure the full height is utilized for scrolling */
+  margin: 0; /* Remove any margin that might prevent full usage of the page height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-
-.container {
-  padding: 10px 10px;
-}
-
-
 
 /* Particle Styling */
 #particles-js {
-  position: fixed; /* Fix the particles to the screen */
+  position: absolute; /* Ensure particles are part of the layout */
   top: 0;
   left: 0;
-  width: 100vw;  /* Ensure it covers the full viewport width */
-  height: 100vh; /* Ensure it covers the full viewport height */
-  z-index: -1; /* Keep it behind all content */
-
+  width: 100%; /* Full width of the page */
+  height: 100%; /* Full height of the page */
+  z-index: -1; /* Make sure particles are behind the content */
+  pointer-events: none; /* Ensure particles don't block interactions */
 }
 
+/* Ensuring content can scroll */
+.container {
+  padding: 10px;
+  min-height: 100%; /* Ensure container takes up full height */
+  position: relative; /* Ensure it flows with the page content */
+  z-index: 1; /* Make sure content stays above the particles */
+}
 
 
 /*------- Styling Logo ------- */
@@ -59,28 +61,33 @@ html,body{
 
 
 /*------- Created nav bar and added styling to it ------- */
-nav{
-  float:right;
-  line-height:100px;
-  margin-right: 20px;
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribute space between logo and nav */
+  align-items: center; /* Align items vertically in the center */
+  padding: 10px 20px; /* Add some padding to the navbar */
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000; /* Make sure it stays on top of other elements */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-  text-decoration: none;
+  margin-left: 20px; /* Space between nav items */
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Dark color for text */
   font-family: 'Custom', serif;
-  font-size: 27px;
-  color: black;
-  padding: 36px 10px;
-  margin: 0 1px;
-  transition: .3s;
+  font-size: 25px; /* Slightly larger font size for readability */
+  transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
 /*------- Adding Hover to Nav Bar Text ------- */
 
 nav a:hover, 
 nav a.active {
-  color: #c46a99;
-
+    color: #fff; /* White text color on hover */
+    background-color: #c46a99; /* Blue background color on hover */
+    padding: 5px 10px; /* Add padding to hover effect */
+    border-radius: 5px; /* Round corners of the hover effect */
 
 }
 
@@ -114,9 +121,6 @@ color: #c46a99;
 /* Glow Effect on Flexboxes */
 .flex-container- {
   display: flex;
-  flex-wrap: wrap ;
-  justify-content: space-between;
-  gap: 3px;
   margin-top: 3%
 }
 
@@ -164,7 +168,7 @@ button {
 
 /* end  styling */
 
-/* Modal Styling */
+/* Common Modal Styling for all overlays */
 .modal-overlay, 
 .modal-overlayAscii, 
 .modal-overlayUserApps {
@@ -175,8 +179,8 @@ button {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: none; /* Hidden by default */
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   z-index: 9999;
 }
 
@@ -190,8 +194,14 @@ button {
   width: 80%;
   max-width: 900px;
   text-align: center;
+  /* Flexbox for centering content inside the modal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Ensure the video/image fits within the modal content */
 .modal-content video, 
 .modal-contentAscii img, 
 .modal-contentUserApps img {
@@ -213,6 +223,7 @@ button {
   right: 10px;
 }
 
+/* Hover effect for close buttons */
 .close-btn:hover, 
 .close-btnAscii:hover, 
 .close-btn-UserApps:hover {
@@ -227,71 +238,40 @@ button {
   color: black;
   font-size: 30px;
   margin-top: 5%;
-  display: inline-flex; /* Use flexbox for alignment */
-  align-items: center;  /* Vertically align content */
-  justify-content: center; /* Horizontally align content */
-  width: 50px;          /* Set a fixed width for both */
-  height: 50px;         /* Set a fixed height for both */
-  border: none;         /* Remove any border */
-  border-radius: 50%;    /* Make circular shape */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for floating effect */
-  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .show-profile-btn:hover, 
 .show-profile-btn-UserInputApps:hover, 
 .show-profile-btn-StringSplittingApps:hover {
-  background-color: #f0f0f0; /* Light background on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .show-profile-btn:active, 
 .show-profile-btn-UserInputApps:active, 
 .show-profile-btnAscii:active {
-  background-color: #e0e0e0; /* Darker background on click */
+  background-color: #e0e0e0;
 }
 
 /* Icons styling inside buttons */
 .show-profile-btn ion-icon, 
 .show-profile-btn-UserInputApps ion-icon,
 .show-profile-btnAscii ion-icon, 
-  .icons a {
-    font-size: 24px; /* Adjust icon size */
-    color: #333;     /* Set the icon color */
-    display: inline-flex; /* Ensures the icon stays aligned inside the button */
-    justify-content: center;
-    align-items: center;
-
-  }
-
-
-
-
-
-/* Icons links inside .icons */
 .icons a {
-  color: black;
-  font-size: 30px;
-  display: inline-flex; /* Align icon correctly */
-  align-items: center;  /* Center the icon vertically */
-  justify-content: center; /* Center the icon horizontally */
-  width: 50px;
-  height: 50px;
-  border: none;
-  background-color: #fff;
-  border-radius: 50%;
-  text-decoration: none; /* Remove link underline */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow effect */
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.icons a:hover {
-  background-color: #f0f0f0; /* Hover background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hover shadow */
-}
-
-.icons a:active {
-  background-color: #e0e0e0; /* Active background color */
+  font-size: 24px;
+  color: #333;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Modal Overlay when visible */
@@ -306,4 +286,16 @@ button {
 .modal-overlayAscii .modal-contentAscii, 
 .modal-overlayUserApps .modal-contentUserApps {
   animation: modalIn 0.3s ease-in-out;
+}
+
+/* Optional: Modal fade-in effect */
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

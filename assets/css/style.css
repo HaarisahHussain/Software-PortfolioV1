@@ -28,7 +28,7 @@ body {
   
   .intro-container {
     top: 100px;
-    height: 100vh;
+    height: 85vh;
     width:100%;
     display: flex;
     flex-direction: column;
@@ -136,10 +136,8 @@ nav a.active {
     color: #fff; /* White text color on hover */
     background-color: #c46a99; /* Blue background color on hover */
     padding: 5px 10px; /* Add padding to hover effect */
-    border-radius: 5px; /* Round corners of the hover effect *
+    border-radius: 5px; /* Round corners of the hover effect */
 
 
 }
-
-
-
+    

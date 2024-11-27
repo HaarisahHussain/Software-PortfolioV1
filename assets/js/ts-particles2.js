@@ -1,7 +1,7 @@
 tsParticles.load("particles-js", {
     particles: {
       number: {
-        value: 150,
+        value: 90,
         density: {
           enable: true,
           value_area: 800
@@ -11,14 +11,14 @@ tsParticles.load("particles-js", {
         type: "circle"
       },
       color: {
-        value: "#ADD8E6"
+        value: "#D3D3D3"
       },
       opacity: {
         value: 50,
         anim: {
           enable: true,
           speed: 1,
-          opacity_min: 50
+          opacity_min: 10
         }
       },
       size: {
@@ -26,7 +26,7 @@ tsParticles.load("particles-js", {
         anim: {
           enable: true,
           speed: 10,
-          size_min: 0.1
+          size_min: 0.05
         }
       },
       move: {
