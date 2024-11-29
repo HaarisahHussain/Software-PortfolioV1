@@ -17,9 +17,11 @@
 
 /* Ensuring the page is scrollable */
 html, body {
-  height: 100%; /* Ensure the full height is utilized for scrolling */
-  margin: 0; /* Remove any margin that might prevent full usage of the page height */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box; /* Ensures padding doesn't increase overall width */
 }
 
 /* Particle Styling */
@@ -35,11 +37,14 @@ html, body {
 
 /* Ensuring content can scroll */
 .container {
-  padding: 10px;
-  min-height: 100%; /* Ensure container takes up full height */
-  position: relative; /* Ensure it flows with the page content */
+  padding: 20px;  /* Adjust this padding as needed */
+  min-height: 100%;  /* Ensure container stretches fully */
+  display: flex;
+  flex-direction: column;  /* Allow content to flow vertically */
+  position: relative;
   z-index: 1; /* Make sure content stays above the particles */
 }
+
 
 
 /*------- Styling Logo ------- */
@@ -91,6 +96,31 @@ nav a.active {
 
 }
 
+/*------- Footer Styling Start ------- */
+footer {
+  display: flex;
+  justify-content: space-between; /* Distribute space between logo and nav */
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black; /* White text */
+  z-index: 1000; /* Make sure it stays on top of other elements */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  width: 100%;
+  bottom: 0;
+} 
+
+/* Footer container styling */
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/*------- Footer Styling End ------- */
+
+
 header {
   background: #333;
   color: #fff;
@@ -122,6 +152,10 @@ color: #c46a99;
 .flex-container- {
   display: flex;
   margin-top: 3%
+}
+
+.flex-container-2{
+  display: flex;
 }
 
 .flex-child:hover {
@@ -171,7 +205,9 @@ button {
 /* Common Modal Styling for all overlays */
 .modal-overlay, 
 .modal-overlayAscii, 
-.modal-overlayUserApps {
+.modal-overlayUserApps,
+.modalOverlayStringSplittingApps,
+.modal-overlayStatementsNLoops {
   position: fixed;
   top: 0;
   left: 0;
@@ -187,7 +223,9 @@ button {
 /* Modal content styling */
 .modal-content, 
 .modal-contentAscii, 
-.modal-contentUserApps {
+.modal-contentUserApps,
+.modal-content-StringSplittingApps,
+.modal-contentStatementsNLoops {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -212,7 +250,9 @@ button {
 /* Close buttons for modals */
 .close-btn, 
 .close-btnAscii, 
-.close-btn-UserApps {
+.close-btn-UserApps, 
+.close-btn-StringSplittingApps,
+.close-btn-StatementsNLoops{
   background-color: transparent;
   color: #333;
   font-size: 30px;
@@ -226,14 +266,18 @@ button {
 /* Hover effect for close buttons */
 .close-btn:hover, 
 .close-btnAscii:hover, 
-.close-btn-UserApps:hover {
+.close-btn-UserApps:hover,
+.close-btn-StringSplittingApps:hover,
+.close-btn-StatementsNLoops:hover{
   color: #f44336;
 }
 
 /* Profile button (the buttons to open modals) */
 .show-profile-btn, 
 .show-profile-btn-UserInputApps, 
-.show-profile-btnAscii {
+.show-profile-btnAscii,
+.show-profile-btn-StringSplittingApps,
+.show-profile-btn-StatementsNLoops {
   background-color: white;
   color: black;
   font-size: 30px;
@@ -251,14 +295,18 @@ button {
 
 .show-profile-btn:hover, 
 .show-profile-btn-UserInputApps:hover, 
-.show-profile-btn-StringSplittingApps:hover {
+.show-profile-btn-StringSplittingApps:hover,
+.show-profile-btn-StringSplittingApps:hover,
+.show-profile-btn-StatementsNLoops:hover {
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .show-profile-btn:active, 
 .show-profile-btn-UserInputApps:active, 
-.show-profile-btnAscii:active {
+.show-profile-btnAscii:active,
+.show-profile-btn-StringSplittingApps:active,
+.show-profile-btn-StatementsNLoops:active{
   background-color: #e0e0e0;
 }
 
@@ -266,6 +314,8 @@ button {
 .show-profile-btn ion-icon, 
 .show-profile-btn-UserInputApps ion-icon,
 .show-profile-btnAscii ion-icon, 
+.show-profile-btn-StringSplittingApps ion-icon,
+.show-profile-btn-StatementsNLoops ion-icon, 
 .icons a {
   font-size: 24px;
   color: #333;
@@ -277,16 +327,21 @@ button {
 /* Modal Overlay when visible */
 .modal-overlay.show, 
 .modal-overlayAscii.show, 
-.modal-overlayUserApps.show {
+.modal-overlayUserApps.show,
+.modalOverlayStringSplittingApps.show {
   display: flex;
 }
 
 /* Modal content animation */
 .modal-overlay .modal-content, 
 .modal-overlayAscii .modal-contentAscii, 
-.modal-overlayUserApps .modal-contentUserApps {
+.modal-overlayUserApps .modal-contentUserApps,
+.modalOverlayStringSplittingApps .modal-content-StringSplittingApps
+.modal-overlayStatementsNLoops .modal-contentStatementsNLoops{
   animation: modalIn 0.3s ease-in-out;
 }
+
+
 
 /* Optional: Modal fade-in effect */
 @keyframes modalIn {
