@@ -1,5 +1,4 @@
-/*----- Custom Fonts ------*/
-@font-face {
+font-face {
   font-family: 'Custom' ;
   src: url(/assets/fnt/Hey\ Comic.ttf);
 }
@@ -192,22 +191,17 @@ button {
 }
 
 
-/* Flex individual styling */
-
-
-
-
-
-
-
-/* end  styling */
 
 /* Common Modal Styling for all overlays */
 .modal-overlay, 
 .modal-overlayAscii, 
 .modal-overlayUserApps,
 .modalOverlayStringSplittingApps,
-.modal-overlayStatementsNLoops {
+.modal-overlayStatementsNLoops,
+.modal-overlayCalcStatements, 
+.modal-overlayIterationApps,
+.modal-overlayCalcFunc,
+.modal-overlayArraysList{
   position: fixed;
   top: 0;
   left: 0;
@@ -225,7 +219,11 @@ button {
 .modal-contentAscii, 
 .modal-contentUserApps,
 .modal-content-StringSplittingApps,
-.modal-contentStatementsNLoops {
+.modal-contentStatementsNLoops,
+.modal-contentCalcStatements,
+ .modal-contentIterationApps,
+ .modal-contentCalcFunc,
+ .modal-contentArraysList {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -252,7 +250,11 @@ button {
 .close-btnAscii, 
 .close-btn-UserApps, 
 .close-btn-StringSplittingApps,
-.close-btn-StatementsNLoops{
+.close-btn-StatementsNLoops,
+.close-btn-CalcStatements,
+.close-btnIterationApps,
+.close-btnCalcFunc, 
+.close-btnArraysList {
   background-color: transparent;
   color: #333;
   font-size: 30px;
@@ -268,7 +270,11 @@ button {
 .close-btnAscii:hover, 
 .close-btn-UserApps:hover,
 .close-btn-StringSplittingApps:hover,
-.close-btn-StatementsNLoops:hover{
+.close-btn-StatementsNLoops:hover,
+.close-btn-CalcStatements:hover,
+.close-btnIterationApps:hover
+.close-btnCalcFunc:hover,
+.close-btnArraysList:hover { 
   color: #f44336;
 }
 
@@ -277,7 +283,11 @@ button {
 .show-profile-btn-UserInputApps, 
 .show-profile-btnAscii,
 .show-profile-btn-StringSplittingApps,
-.show-profile-btn-StatementsNLoops {
+.show-profile-btn-StatementsNLoops,
+.show-profile-btn-CalcStatements,
+.show-profile-btnIterationApps,
+.show-profile-btn-CalcFunc,
+.show-profile-btn-ArraysList {
   background-color: white;
   color: black;
   font-size: 30px;
@@ -297,7 +307,11 @@ button {
 .show-profile-btn-UserInputApps:hover, 
 .show-profile-btn-StringSplittingApps:hover,
 .show-profile-btn-StringSplittingApps:hover,
-.show-profile-btn-StatementsNLoops:hover {
+.show-profile-btn-StatementsNLoops:hover,
+.show-profile-btn-CalcStatements:hover,
+.show-profile-btnIterationApps:hover,
+.show-profile-btn-CalcFunc:hover,
+.show-profile-btn-ArraysList:hover {
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -306,7 +320,11 @@ button {
 .show-profile-btn-UserInputApps:active, 
 .show-profile-btnAscii:active,
 .show-profile-btn-StringSplittingApps:active,
-.show-profile-btn-StatementsNLoops:active{
+.show-profile-btn-StatementsNLoops:active,
+.show-profile-btn-CalcStatements:active,
+.show-profile-btnIterationApps:active,
+.show-profile-btn-CalcFunc:active,
+.show-profile-btn-ArraysList:active {
   background-color: #e0e0e0;
 }
 
@@ -315,7 +333,11 @@ button {
 .show-profile-btn-UserInputApps ion-icon,
 .show-profile-btnAscii ion-icon, 
 .show-profile-btn-StringSplittingApps ion-icon,
-.show-profile-btn-StatementsNLoops ion-icon, 
+.show-profile-btn-StatementsNLoops ion-icon,
+.show-profile-btn-CalcStatements ion-icon, 
+.show-profile-btnIterationApps ion-icon,
+.show-profile-btn-CalcFunc ion-icon,
+.show-profile-btn-ArraysList ion-icon,
 .icons a {
   font-size: 24px;
   color: #333;
@@ -328,7 +350,10 @@ button {
 .modal-overlay.show, 
 .modal-overlayAscii.show, 
 .modal-overlayUserApps.show,
-.modalOverlayStringSplittingApps.show {
+.modalOverlayStringSplittingApps.show,
+.modal-overlayCalcStatements.show,
+.modal-overlayCalcFunc.show,
+.modal-overlayArraysList.show {
   display: flex;
 }
 
@@ -336,8 +361,12 @@ button {
 .modal-overlay .modal-content, 
 .modal-overlayAscii .modal-contentAscii, 
 .modal-overlayUserApps .modal-contentUserApps,
-.modalOverlayStringSplittingApps .modal-content-StringSplittingApps
-.modal-overlayStatementsNLoops .modal-contentStatementsNLoops{
+.modalOverlayStringSplittingApps .modal-content-StringSplittingApps,
+.modal-overlayStatementsNLoops .modal-contentStatementsNLoops,
+.modal-overlayCalcStatements .modal-contentCalcStatements,
+.modal-overlayIterationApps  .modal-contentIterationApps,
+.modal-overlayCalcFunc .modal-contentCalcFunc, 
+.modal-overlayArraysList .modal-contentArraysList{
   animation: modalIn 0.3s ease-in-out;
 }
 
