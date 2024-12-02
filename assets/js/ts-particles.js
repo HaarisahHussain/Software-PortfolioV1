@@ -11,14 +11,14 @@ tsParticles.load("particles-js", {
         type: "circle"
       },
       color: {
-        value: "#ADD8E6"
+        value: "#E6A6FF"
       },
       opacity: {
         value: 50,
         anim: {
           enable: true,
           speed: 1,
-          opacity_min: 50
+          opacity_min: 0.1
         }
       },
       size: {

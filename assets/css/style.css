@@ -1,143 +1,121 @@
-
 /*----- Custom Fonts ------*/
 @font-face {
-    font-family: 'Custom' ;
-    src: url(/assets/fnt/Hey\ Comic.ttf);
+  font-family: 'Custom' ;
+  src: url(/assets/fnt/Hey\ Comic.ttf);
 }
 @font-face {
-    font-family: 'Logo';
-    src: url(/assets/fnt/magic_retro/Magic\ Retro.ttf);
+  font-family: 'Logo';
+  src: url(/assets/fnt/magic_retro/Magic\ Retro.ttf);
 }
 @font-face {
-    font-family: "Header-Txt";
-    src: url(/assets/fnt/rosalia/Rosalia.otf);
+  font-family: "Header-Txt";
+  src: url(/assets/fnt/rosalia/Rosalia.otf);
 }
 
 
 
-/* style.css */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: black;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  
-  .intro-container {
-    top: 100px;
-    height: 85vh;
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0px;
-    background-color: #f7f7f7;
-  }
 
-  
-  /* Intro container text styling */
-  h1 {
-    margin: 0;
-    font-size: 50px;
-    font-family: 'Header-Txt', serif;
-  }
-  
-  #subtext {
-    margin-top: 20px;
-    font-size: 25px;
-    color: black;
-    font-family: 'Custom', sans-serif;
-  }
+/* Ensuring the page is scrollable */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box; /* Ensures padding doesn't increase overall width */
+}
 
-  #scroll {
-    margin-top: 20px;
-    font-size: 20px;
-    color: black;
-    font-family: 'Custom', sans-serif;
-  }
-  
-  
-  .content-container {
-    opacity: 0; /* Initially hidden */
-    transform: translateY(50px); /* Initially shifted down */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
-    padding: 40px;
-    background-color: #fff;
-    color: black; /* Correct color value */
-  }
 
-  
-  .content-container.show {
-    opacity: 1; /* Show when scrolled into view */
-    transform: translateY(0); /* Reset position */
-  }
-  
-  .content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
+/* Ensuring content can scroll */
+.container {
+  padding: 20px;  /* Adjust this padding as needed */
+  min-height: 100%;  /* Ensure container stretches fully */
+  display: flex;
+  flex-direction: column;  /* Allow content to flow vertically */
+  position: relative;
+  z-index: 1; /* Make sure content stays above the particles */
+}
 
-  /*------- Styling Logo ------- */
+.intro-container {
+  top: 100px;
+  height: 85vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+
+}
+
+
+/* Intro container text styling */
+h1 {
+  margin: 0;
+  font-size: 50px;
+  font-family: 'Header-Txt', serif;
+}
+
+#subtext {
+  margin-top: 20px;
+  font-size: 25px;
+  color: black;
+  font-family: 'Custom', sans-serif;
+}
+
+#scroll {
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+  font-family: 'Custom', sans-serif;
+}
+
+
+/*------- Styling Logo ------- */
 .logo{
-    float:left; 
-    width:30%;
-    text-align: left;
-    line-height:100px;
+  float:left; 
+  width:30%;
+  text-align: left;
+  line-height:100px;
 }
 
 .logo a{
-    text-decoration: none;
-    font-size: 40px;
-    font-family: 'Logo', serif;
-    color: black;
+  text-decoration: none;
+  font-size: 40px;
+  font-family: 'Logo', serif;
+  color: black;
 
 }
 
 /*------- Created nav bar and added styling to it ------- */
 .navbar {
-    display: flex;
-    justify-content: space-between; /* Distribute space between logo and nav */
-    align-items: center; /* Align items vertically in the center */
-    padding: 10px 20px; /* Add some padding to the navbar */
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: 1000; /* Make sure it stays on top of other elements */
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
+  display: flex;
+  justify-content: space-between; /* Distribute space between logo and nav */
+  align-items: center; /* Align items vertically in the center */
+  padding: 10px 20px; /* Add some padding to the navbar */
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000; /* Make sure it stays on top of other elements */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
 nav a {
-    margin-left: 20px; /* Space between nav items */
-    text-decoration: none; /* Remove underline */
-    color: #333; /* Dark color for text */
-    font-family: 'Custom', serif;
-    font-size: 25px; /* Slightly larger font size for readability */
-    transition: color 0.3s ease, background-color 0.3s ease; 
+  margin-left: 20px; /* Space between nav items */
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Dark color for text */
+  font-family: 'Custom', serif;
+  font-size: 25px; /* Slightly larger font size for readability */
+  transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
 /*------- Adding Hover to Nav Bar Text ------- */
 
 nav a:hover, 
 nav a.active {
-    color: #fff; /* White text color on hover */
-    background-color: #c46a99; /* Blue background color on hover */
-    padding: 5px 10px; /* Add padding to hover effect */
-    border-radius: 5px; /* Round corners of the hover effect */
+  color: #fff; /* White text color on hover */
+  background-color: #c46a99; /* Blue background color on hover */
+  padding: 5px 10px; /* Add padding to hover effect */
+  border-radius: 5px; /* Round corners of the hover effect */
 
 
 }
-    
+

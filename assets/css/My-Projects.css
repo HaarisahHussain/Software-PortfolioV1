@@ -1,4 +1,4 @@
-font-face {
+@font-face {
   font-family: 'Custom' ;
   src: url(/assets/fnt/Hey\ Comic.ttf);
 }
@@ -62,25 +62,25 @@ html, body {
 
 }
 
-
-
 /*------- Created nav bar and added styling to it ------- */
 .navbar {
   display: flex;
+  font-family: 'Custom', serif;
+  font-size: 25px; /* Slightly larger font size for readability */
   justify-content: space-between; /* Distribute space between logo and nav */
   align-items: center; /* Align items vertically in the center */
   padding: 10px 20px; /* Add some padding to the navbar */
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 1000; /* Make sure it stays on top of other elements */
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   
 }
 
 nav a {
   margin-left: 20px; /* Space between nav items */
   text-decoration: none; /* Remove underline */
   color: #333; /* Dark color for text */
-  font-family: 'Custom', serif;
-  font-size: 25px; /* Slightly larger font size for readability */
+
   transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
@@ -88,12 +88,14 @@ nav a {
 
 nav a:hover, 
 nav a.active {
-    color: #fff; /* White text color on hover */
-    background-color: #c46a99; /* Blue background color on hover */
-    padding: 5px 10px; /* Add padding to hover effect */
-    border-radius: 5px; /* Round corners of the hover effect */
+  color: #fff; /* White text color on hover */
+  background-color: #c46a99; /* Blue background color on hover */
+  padding: 5px 10px; /* Add padding to hover effect */
+  border-radius: 5px; /* Round corners of the hover effect */
+
 
 }
+
 
 /*------- Footer Styling Start ------- */
 footer {
@@ -157,6 +159,10 @@ color: #c46a99;
   display: flex;
 }
 
+.flex-container-3{
+  display: flex;
+}
+
 .flex-child:hover {
   box-shadow: 0 0 25px  #c46a99; /* Glowing effect on hover */
 }
@@ -176,7 +182,13 @@ color: #c46a99;
 
 .flex-child h1 {
   font-family: 'Header-Txt', serif;
-  font-size: 40px;
+  font-size: 20px;
+  margin-top: 1%
+}
+
+.flex-child p {
+  font-family: 'Custom', serif;
+  font-size: 18px;
   margin-top: 1%
 }
 
@@ -189,6 +201,11 @@ button {
   font-size: 1rem;
   margin-top: 10px;
 }
+
+
+
+
+
 
 
 
@@ -287,7 +304,8 @@ button {
 .show-profile-btn-CalcStatements,
 .show-profile-btnIterationApps,
 .show-profile-btn-CalcFunc,
-.show-profile-btn-ArraysList {
+.show-profile-btn-ArraysList,
+.show-profile-btn-SquareDashGame {
   background-color: white;
   color: black;
   font-size: 30px;
@@ -307,11 +325,13 @@ button {
 .show-profile-btn-UserInputApps:hover, 
 .show-profile-btn-StringSplittingApps:hover,
 .show-profile-btn-StringSplittingApps:hover,
+.show-profile-btnAscii:hover
 .show-profile-btn-StatementsNLoops:hover,
 .show-profile-btn-CalcStatements:hover,
 .show-profile-btnIterationApps:hover,
 .show-profile-btn-CalcFunc:hover,
-.show-profile-btn-ArraysList:hover {
+.show-profile-btn-ArraysList:hover,
+.show-profile-btn-SquareDashGame:hover {
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -324,7 +344,8 @@ button {
 .show-profile-btn-CalcStatements:active,
 .show-profile-btnIterationApps:active,
 .show-profile-btn-CalcFunc:active,
-.show-profile-btn-ArraysList:active {
+.show-profile-btn-ArraysList:active,
+.show-profile-btn-SquareDashGame:active {
   background-color: #e0e0e0;
 }
 
@@ -338,6 +359,7 @@ button {
 .show-profile-btnIterationApps ion-icon,
 .show-profile-btn-CalcFunc ion-icon,
 .show-profile-btn-ArraysList ion-icon,
+.show-profile-btn-SquareDashGame ion-icon,
 .icons a {
   font-size: 24px;
   color: #333;
