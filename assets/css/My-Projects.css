@@ -405,3 +405,301 @@ button {
     transform: scale(1);
   }
 }
+
+
+
+/* Styling all text for each modal */
+.UserAppsPara,
+.StatementsNLoopsPara,
+.CalcStatementsPara,
+.IterationAppsPara{
+  font-size: 21px;
+  font-family: 'Custom', sans-serif;
+}
+
+.UserInputTitle,
+.StatementsNLoopsTitle,
+.CalcStatementsTitle,
+.IterationAppsTitle{
+  font-size: 30px;
+  font-family: 'Header-txt', sans-serif;
+  margin-bottom: 10%;
+}
+
+
+
+
+/* BattleShip Modal Styling Start */
+/* Game Info */
+#game-info {
+  margin-bottom: 20px;
+}
+
+#game-info p {
+  font-size: 20px;
+  font-family: 'Custom', serif;
+  margin: 5px 0;
+}
+
+#game-info span {
+  color: black
+}
+
+/* Grid Container */
+#grid-container {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  gap: 5px;
+}
+
+#input-container label {
+  font-size: 14px;
+}
+
+#input-container input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+#input-container input:focus {
+  border-color: #c46a99;
+  outline: none;
+}
+
+/* Shoot Button */
+#shoot-button {
+  background-color: #c46a99;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Message */
+#message {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+  color: #dc3545; /* Red for error messages, or change dynamically */
+}
+
+#input-container {
+  width: 100%;
+}
+
+/* BattleShip Modal Styling End */
+
+/* ASCII Art Container styling start*/
+/* ASCII Art Container */
+#ascii-art-container {
+  padding-top: 20px;
+}
+
+#ascii-art-container h2 {
+  font-size: 24px;
+  margin-left: 25%;
+  margin-bottom: 15px;
+  color: black;
+  font-family: 'Custom',serif;
+}
+
+#ascii-output{
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+
+}
+
+/* ASCII Art Container styling end*/
+
+
+
+/*User Input Apps styling Start*/
+
+/* Input Fields */
+.UserInputLbl {
+  font-size: 21px;
+  font-family: 'Header-txt', sans-serif;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input[type="number"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+input[type="number"]:focus {
+  border-color:#c46a99;
+  outline: none;
+}
+
+/* Calculate Button */
+#calculateBtn {
+  background-color:  #c46a99;
+  font-family: 'Custom', sans-serif;
+  font-size: 21px;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+
+/* Output Area */
+#output {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+/*User Input Apps styling End*/
+
+
+
+/*String Splitting styling Start*/
+
+label{
+  font-size: 25px;
+  font-family: 'Header-txt', sans-serif;
+  margin-bottom: 10px; /* Add some space between label and input */
+  display: block
+}
+
+.SplitNameTitle{
+  font-size: 30px;
+  font-family: 'Header-txt', sans-serif;
+
+}
+
+.splitNamePara{
+  font-size: 21px;
+  font-family: 'Custom', sans-serif;
+  
+}
+/* Input Fields */
+.input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+  border-color: #c46a99;
+  outline: none;
+}
+
+/* Split Name Button */
+#splitNameButton {
+  background-color:#c46a99;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+
+
+/* Display Forename and Surname */
+#forename, #surname {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Error Message */
+#errorMsgStringSplitting {
+  font-size: 16px;
+  color: red;
+  margin-top: 10px;
+}
+
+
+
+/*String Splitting styling End*/
+
+
+/*Calc Statements Styling Start*/
+
+/* Start Button */
+#startBtn {
+  background-color: #c46a99;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+/* Output Message */
+#outputFib {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
+/*Calc Statements Styling End*/
+
+
+/*Iteration Apps Styling Start*/
+
+/* Gamertag Input */
+#gamertagInput {
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+#gamertagInput:focus {
+  border-color:  #c46a99;
+  outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color:  #c46a99;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*Iteration Apps Styling End*/
