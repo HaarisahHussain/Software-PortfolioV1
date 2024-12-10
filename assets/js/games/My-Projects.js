@@ -19,11 +19,7 @@
   }
 
 
-
-  //Circle Properties 
-
-
-   // Wait for the DOM to be fully loaded before binding event listeners
+// Wait for the DOM to be fully loaded before binding event listeners
 document.addEventListener("DOMContentLoaded", function () {
   // Attach event listener to the "Calculate" button
   document.getElementById("calculateBtn").addEventListener("click", function () {
@@ -67,14 +63,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById('closeBtnUserApps').addEventListener('click', function() {
     document.getElementById('modalOverlayUserApps').style.display = 'none';
+    resetModalState();  // Reset the modal state when closed
   });
 
   // Close modal when clicking outside of it
   window.onclick = function(event) {
     if (event.target == document.getElementById('modalOverlayUserApps')) {
       document.getElementById('modalOverlayUserApps').style.display = 'none';
+      resetModalState();  // Reset the modal state when clicked outside
     }
   };
+
+  // Function to reset modal state (clear inputs and output)
+  function resetModalState() {
+    document.getElementById('diameter').value = '';  // Clear diameter input
+    document.getElementById('arcAngle').value = '';  // Clear arc angle input
+    document.getElementById('output').innerHTML = '';  // Clear the result
+  }
 });
-
-

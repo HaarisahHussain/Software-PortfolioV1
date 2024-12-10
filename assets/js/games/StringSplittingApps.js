@@ -40,4 +40,5 @@ function splitName() {
     // Display the forename and surname
     document.getElementById("forename").textContent = `Forename: ${forename}`;
     document.getElementById("surname").textContent = `Surname: ${surname}`;
+
 }

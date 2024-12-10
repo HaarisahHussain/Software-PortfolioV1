@@ -6,9 +6,7 @@ function openCalcFuncModal() {
 // Function to close the modal
 function closeConversionModal() {
     document.getElementById('modalOverlayCalcFunc').style.display = 'none';
-    // Clear input and result message when modal is closed
-    document.getElementById('inputValue').value = '';
-    document.getElementById('resultMessage').textContent = '';
+    resetModalState();  // Reset modal state when it is closed
 }
 
 // Function to handle conversions
@@ -47,3 +45,19 @@ function convertValue() {
             break;
     }
 }
+
+// Function to reset the modal to its original state
+function resetModalState() {
+    // Reset input fields and result message
+    document.getElementById('inputValue').value = '';
+    document.getElementById('resultMessage').textContent = '';
+    document.getElementById('resultMessage').style.color = '';  // Reset text color
+}
+
+// Add event listener to close modal when clicking outside of it
+document.getElementById('modalOverlayCalcFunc').addEventListener('click', function(event) {
+    // Check if the click was outside the modal content (i.e., the modal overlay area)
+    if (event.target === this) {
+        closeConversionModal();
+    }
+});
