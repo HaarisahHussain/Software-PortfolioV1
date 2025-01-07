@@ -119,3 +119,18 @@ nav a.active {
 
 }
 
+/*------- Social Media Icons ------- */
+.social-icon{
+  font-size: 40px;
+  color: #333;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Optional: scale the icon slightly on hover */
+  color: grey;
+
+}

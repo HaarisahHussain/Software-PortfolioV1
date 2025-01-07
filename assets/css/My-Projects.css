@@ -11,6 +11,21 @@
   src: url(/assets/fnt/rosalia/Rosalia.otf);
 }
 
+/*----- Custom Fonts for Modals ------*/
+@font-face {
+  font-family: "Modal-Title";
+  src: url(/assets/fnt/bebas_kai/BebasKai.ttf);
+}
+
+@font-face {
+  font-family: "Modal-Subheadings";
+  src: url(/assets/fnt/louis_george_cafe/Louis\ George\ Cafe.ttf);
+}
+
+@font-face {
+  font-family: "Modal-Paragraphs";
+  src: url(/assets/fnt/creato_display/CreatoDisplay-Bold.otf);
+}
 
 
 
@@ -202,13 +217,6 @@ button {
   margin-top: 10px;
 }
 
-
-
-
-
-
-
-
 /* Common Modal Styling for all overlays */
 .modal-overlay, 
 .modal-overlayAscii, 
@@ -239,8 +247,7 @@ button {
 .modal-contentStatementsNLoops,
 .modal-contentCalcStatements,
  .modal-contentIterationApps,
- .modal-contentCalcFunc,
- .modal-contentArraysList {
+ .modal-contentCalcFunc{
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
@@ -254,13 +261,64 @@ button {
   align-items: center;
 }
 
-/* Ensure the video/image fits within the modal content */
-.modal-content video, 
-.modal-contentAscii img, 
-.modal-contentUserApps img {
-  max-width: 100%;
-  height: auto;
+/* General Paragraph Styling */
+.modal-content, 
+.modal-contentAscii p, 
+.modal-contentUserApps p,
+.modal-content-StringSplittingApps p,
+.modal-contentStatementsNLoops p,
+.modal-contentCalcStatements p,
+ .modal-contentIterationApps p,
+ .modal-contentCalcFunc p{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  /* Flexbox for centering content inside the modal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Modal-Paragraphs', sans-serif;
 }
+
+
+/* Start of Specific styling for .modal-contentArraysList */
+.modal-contentArraysList {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%; /* Make this smaller */
+  max-width: 500px; /* Set a smaller max-width */
+  text-align: center;
+  /* Flexbox for centering content inside the modal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contentArraysList p{
+  font-family: 'Modal-Paragraphs', sans-serif;
+  margin-bottom: 5%;
+}
+
+
+/* End of Specific styling for .modal-contentArraysList */
+
+/* Modal Header Styling*/
+h1{
+  font-family: 'Modal-Subheadings', sans-serif;
+  margin-bottom: 5%;
+}
+
+h2{
+  font-family: 'Modal-Subheadings', sans-serif;
+  margin-bottom: 5%;
+}
+
 
 /* Close buttons for modals */
 .close-btn, 
@@ -361,12 +419,30 @@ button {
 .show-profile-btn-ArraysList ion-icon,
 .show-profile-btn-SquareDashGame ion-icon,
 .icons a {
-  font-size: 24px;
+  font-size: 25px;
   color: #333;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
+
+.show-profile-btn ion-icon:hover,
+.show-profile-btn-UserInputApps ion-icon:hover,
+.show-profile-btnAscii ion-icon:hover, 
+.show-profile-btn-StringSplittingApps ion-icon:hover,
+.show-profile-btn-StatementsNLoops ion-icon:hover,
+.show-profile-btn-CalcStatements ion-icon:hover, 
+.show-profile-btnIterationApps ion-icon:hover,
+.show-profile-btn-CalcFunc ion-icon:hover,
+.show-profile-btn-ArraysList ion-icon:hover,
+.show-profile-btn-SquareDashGame ion-icon:hover,
+.icons a:hover {
+  color: grey; 
+  transform: scale(1.3); 
+}
+
+
+
 
 /* Modal Overlay when visible */
 .modal-overlay.show, 
@@ -408,26 +484,17 @@ button {
 
 
 
-/* Styling all text for each modal */
-.UserAppsPara,
-.StatementsNLoopsPara,
-.CalcStatementsPara,
-.IterationAppsPara{
-  font-size: 21px;
-  font-family: 'Custom', sans-serif;
-}
-
-.UserInputTitle,
-.StatementsNLoopsTitle,
-.CalcStatementsTitle,
-.IterationAppsTitle{
-  font-size: 30px;
-  font-family: 'Header-txt', sans-serif;
-  margin-bottom: 10%;
+/*Styling for all label text*/
+label{
+  font-size: 25px;
+  font-family: 'Modal-Title', sans-serif;
+  margin-bottom: 10px; /* Add some space between label and input */
+  display: block
 }
 
 
 
+/*Individual Modal Styling/
 
 /* BattleShip Modal Styling Start */
 /* Game Info */
@@ -435,11 +502,6 @@ button {
   margin-bottom: 20px;
 }
 
-#game-info p {
-  font-size: 20px;
-  font-family: 'Custom', serif;
-  margin: 5px 0;
-}
 
 #game-info span {
   color: black
@@ -450,12 +512,9 @@ button {
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(10, 30px);
-  gap: 5px;
 }
 
-#input-container label {
-  font-size: 14px;
-}
+
 
 #input-container input {
   padding: 8px;
@@ -502,13 +561,6 @@ button {
   padding-top: 20px;
 }
 
-#ascii-art-container h2 {
-  font-size: 24px;
-  margin-left: 25%;
-  margin-bottom: 15px;
-  color: black;
-  font-family: 'Custom',serif;
-}
 
 #ascii-output{
   font-family: "Courier New", monospace;
@@ -525,7 +577,6 @@ button {
 /* Input Fields */
 .UserInputLbl {
   font-size: 21px;
-  font-family: 'Header-txt', sans-serif;
   margin-bottom: 5px;
   color: #333;
 }
@@ -576,12 +627,7 @@ input[type="number"]:focus {
 
 /*String Splitting styling Start*/
 
-label{
-  font-size: 25px;
-  font-family: 'Header-txt', sans-serif;
-  margin-bottom: 10px; /* Add some space between label and input */
-  display: block
-}
+
 
 .SplitNameTitle{
   font-size: 30px;
