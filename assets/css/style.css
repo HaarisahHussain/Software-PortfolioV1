@@ -56,6 +56,7 @@ h1 {
   font-family: 'Header-Txt', serif;
 }
 
+
 #subtext {
   margin-top: 20px;
   font-size: 25px;
@@ -63,12 +64,11 @@ h1 {
   font-family: 'Custom', sans-serif;
 }
 
-#scroll {
-  margin-top: 20px;
-  font-size: 20px;
-  color: black;
-  font-family: 'Custom', sans-serif;
+#subtext span{
+color: #c46a99;
+text-decoration: underline;
 }
+
 
 
 /*------- Styling Logo ------- */
@@ -120,17 +120,44 @@ nav a.active {
 }
 
 /*------- Social Media Icons ------- */
+
+
+
 .social-icon{
-  font-size: 40px;
+  font-size: 34px;
   color: #333;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-top: 15%;
 
 }
 
 .social-icon:hover {
-  transform: scale(1.1); /* Optional: scale the icon slightly on hover */
+  transform: scale(1.1); /* Scale the icon slightly on hover */
   color: grey;
 
 }
+/*------- Download CV "button" ------- */
+
+.btn-container{
+  margin-top: 5%;
+}
+.DownloadBtn{
+  padding: 16px 35px;
+  text-decoration: none;
+  border: rgb(51, 51, 51) 1px solid;
+  border-radius: 35px;
+  letter-spacing: 2px;
+  color: black;
+
+}
+
+.DownloadBtn:hover{
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(51, 51, 51 0.2);
+
+}
+
+/*------- About Section Styling ------- */
+
