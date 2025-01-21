@@ -111,6 +111,19 @@ nav a.active {
 
 }
 
+/* ------- Styling Navigation Bar ------- */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c46a99;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
 
 /*------- Footer Styling Start ------- */
 footer {
@@ -160,26 +173,29 @@ color: #c46a99;
 .header-text p{
   text-align: center;
   font-size: 25px;
-  font-family: "Custom", serif ;
+  font-family: "Modal-Subheadings", serif ;
 }
 
 /* Flexbox layout for content */
 /* Glow Effect on Flexboxes */
 .flex-container- {
   display: flex;
-  margin-top: 3%
+  margin-top: 3%;
+  gap: 0.5rem; 
 }
 
-.flex-container-2{
+.flex-container-2 {
   display: flex;
+  gap: 0.5rem; 
 }
 
-.flex-container-3{
+.flex-container-3 {
   display: flex;
+  gap: 0.5rem; 
 }
 
 .flex-child:hover {
-  box-shadow: 0 0 25px  #c46a99; /* Glowing effect on hover */
+  box-shadow: 0 0 25px #c46a99; /* Glowing effect on hover */
 }
 
 /* Flex item styling */
@@ -189,11 +205,12 @@ color: #c46a99;
   background-color: #fff;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 5px;
   border: outset;
-  box-shadow: 0 0 15px #c46a99; /* Glow effect */
+  box-shadow: 0 0 11px #c46a99; /* Glow effect */
   transition: box-shadow 0.3s ease; /* Smooth transition */
 }
+
 
 .flex-child h1 {
   font-family: 'Header-Txt', serif;
@@ -261,6 +278,7 @@ button {
   align-items: center;
 }
 
+
 /* General Paragraph Styling */
 .modal-content, 
 .modal-contentAscii p, 
@@ -268,22 +286,10 @@ button {
 .modal-content-StringSplittingApps p,
 .modal-contentStatementsNLoops p,
 .modal-contentCalcStatements p,
- .modal-contentIterationApps p,
- .modal-contentCalcFunc p{
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 900px;
-  text-align: center;
-  /* Flexbox for centering content inside the modal */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.modal-contentIterationApps p,
+.modal-contentCalcFunc p {
   font-family: 'Modal-Paragraphs', sans-serif;
 }
-
 
 /* Start of Specific styling for .modal-contentArraysList */
 .modal-contentArraysList {
@@ -300,25 +306,18 @@ button {
   align-items: center;
 }
 
-.modal-contentArraysList p{
+.modal-contentArraysList p {
   font-family: 'Modal-Paragraphs', sans-serif;
   margin-bottom: 5%;
 }
 
-
 /* End of Specific styling for .modal-contentArraysList */
 
-/* Modal Header Styling*/
-h1{
+/* Modal Header Styling */
+h1, h2 {
   font-family: 'Modal-Subheadings', sans-serif;
   margin-bottom: 5%;
 }
-
-h2{
-  font-family: 'Modal-Subheadings', sans-serif;
-  margin-bottom: 5%;
-}
-
 
 /* Close buttons for modals */
 .close-btn, 
@@ -347,7 +346,7 @@ h2{
 .close-btn-StringSplittingApps:hover,
 .close-btn-StatementsNLoops:hover,
 .close-btn-CalcStatements:hover,
-.close-btnIterationApps:hover
+.close-btnIterationApps:hover,
 .close-btnCalcFunc:hover,
 .close-btnArraysList:hover { 
   color: #f44336;
@@ -441,14 +440,12 @@ h2{
   transform: scale(1.3); 
 }
 
-
-
-
 /* Modal Overlay when visible */
 .modal-overlay.show, 
 .modal-overlayAscii.show, 
 .modal-overlayUserApps.show,
-.modalOverlayStringSplittingApps.show,
+.modal-overlayStringSplittingApps.show,
+.modal-overlayStatementsNLoops.show,
 .modal-overlayCalcStatements.show,
 .modal-overlayCalcFunc.show,
 .modal-overlayArraysList.show {
@@ -459,14 +456,81 @@ h2{
 .modal-overlay .modal-content, 
 .modal-overlayAscii .modal-contentAscii, 
 .modal-overlayUserApps .modal-contentUserApps,
-.modalOverlayStringSplittingApps .modal-content-StringSplittingApps,
+.modaloverlayStringSplittingApps,
+.modal-content-StringSplittingApps,
 .modal-overlayStatementsNLoops .modal-contentStatementsNLoops,
 .modal-overlayCalcStatements .modal-contentCalcStatements,
-.modal-overlayIterationApps  .modal-contentIterationApps,
+.modal-overlayIterationApps .modal-contentIterationApps,
 .modal-overlayCalcFunc .modal-contentCalcFunc, 
-.modal-overlayArraysList .modal-contentArraysList{
+.modal-overlayArraysList .modal-contentArraysList {
   animation: modalIn 0.3s ease-in-out;
 }
+
+
+@keyframes modalIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .flex-container-,
+  .flex-container-2,
+  .flex-container-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-child {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1.25rem;
+  }
+
+  .modal-content,
+  .modal-contentAscii,
+  .modal-contentUserApps,
+  .modal-content-StringSplittingApps,
+  .modal-contentStatementsNLoops,
+  .modal-contentCalcStatements,
+  .modal-contentIterationApps,
+  .modal-contentCalcFunc {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .modal-contentArraysList {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 
 
 
@@ -487,7 +551,7 @@ h2{
 /*Styling for all label text*/
 label{
   font-size: 25px;
-  font-family: 'Modal-Title', sans-serif;
+  font-family: 'Modal-Subheadings', sans-serif;
   margin-bottom: 10px; /* Add some space between label and input */
   display: block
 }
@@ -565,7 +629,13 @@ label{
 #ascii-output{
   font-family: "Courier New", monospace;
   font-size: 16px;
+  text-align: center;
 
+
+}
+
+#ascii-art-container h2{
+  margin-left: 15%;
 }
 
 /* ASCII Art Container styling end*/
@@ -598,7 +668,6 @@ input[type="number"]:focus {
 /* Calculate Button */
 #calculateBtn {
   background-color:  #c46a99;
-  font-family: 'Custom', sans-serif;
   font-size: 21px;
   color: white;
   border: none;
@@ -667,6 +736,12 @@ input[type="text"]:focus {
   margin-bottom: 20px;
 }
 
+#fullNameInput{
+  font-size: 20px;
+  font-family: 'Modal-Subheadings', sans-serif;
+  margin-bottom: 10px; /* Add some space between label and input */
+  display: block
+}
 
 
 /* Display Forename and Surname */
@@ -749,3 +824,77 @@ input[type="text"]:focus {
 }
 
 /*Iteration Apps Styling End*/
+
+/*Arrays N Lists Styling Start*/
+#newNote{
+  font-size: 18px;
+  font-family: 'Modal-Subheadings', sans-serif;
+  margin-bottom: 10px; /* Add some space between label and input */
+  display: block
+}
+
+.btn{
+  background-color:  #c46a99;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*Arrays N Lists Styling End*/
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .flex-container-,
+  .flex-container-2,
+  .flex-container-3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-child {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1.25rem;
+  }
+
+  .modal-content,
+  .modal-contentAscii,
+  .modal-contentUserApps,
+  .modal-content-StringSplittingApps,
+  .modal-contentStatementsNLoops,
+  .modal-contentCalcStatements,
+  .modal-contentIterationApps,
+  .modal-contentCalcFunc {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .modal-contentArraysList {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

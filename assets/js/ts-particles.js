@@ -11,7 +11,7 @@ tsParticles.load("particles-js", {
         type: "circle"
       },
       color: {
-        value: "#E6A6FF"
+        value: "#D3D3D3"
       },
       opacity: {
         value: 50,
