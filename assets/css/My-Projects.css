@@ -77,39 +77,36 @@ html, body {
 
 }
 
-/*------- Created nav bar and added styling to it ------- */
+/* General Navbar Styles */
 .navbar {
   display: flex;
   font-family: 'Custom', serif;
-  font-size: 25px; /* Slightly larger font size for readability */
+  font-size: 25px;
   justify-content: space-between; /* Distribute space between logo and nav */
   align-items: center; /* Align items vertically in the center */
   padding: 10px 20px; /* Add some padding to the navbar */
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 1000; /* Make sure it stays on top of other elements */
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-   
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
   margin-left: 20px; /* Space between nav items */
   text-decoration: none; /* Remove underline */
   color: #333; /* Dark color for text */
-
   transition: color 0.3s ease, background-color 0.3s ease; 
 }
 
-/*------- Adding Hover to Nav Bar Text ------- */
-
+/* Hover effects */
 nav a:hover, 
 nav a.active {
   color: #fff; /* White text color on hover */
   background-color: #c46a99; /* Blue background color on hover */
   padding: 5px 10px; /* Add padding to hover effect */
   border-radius: 5px; /* Round corners of the hover effect */
-
-
 }
+
+
 
 /* ------- Styling Navigation Bar ------- */
 ::-webkit-scrollbar {
@@ -846,34 +843,79 @@ input[type="text"]:focus {
 /*Arrays N Lists Styling End*/
 
 
-/* Responsive Media Queries */
-@media (max-width: 768px) {
+
+
+/* Media Queries for Responsive Design */
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  .navbar {
+    font-size: 25px;
+    padding: 10px 20px;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navbar {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+
+  .flex-child {
+    margin-left: 5%;
+    margin-top: 2%;
+    padding: 10px;
+  }
+
+  .show-profile-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
   .navbar {
     flex-direction: column;
+    font-size: 18px;
+    padding: 5px 10px;
   }
-  
-  .logo {
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left */
     width: 100%;
-    text-align: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%; /* Make sure the links take up full width */
   }
 
   .flex-container-,
   .flex-container-2,
   .flex-container-3 {
     flex-direction: column;
-    align-items: center;
   }
 
   .flex-child {
-    width: 100%;
+    margin-left: 0;
+    margin-top: 2%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 11px #c46a99; /* Glow effect */
+    transition: box-shadow 0.3s ease;
   }
 
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header p {
-    font-size: 1.25rem;
+  .show-profile-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
   }
 
   .modal-content,
@@ -884,17 +926,48 @@ input[type="text"]:focus {
   .modal-contentCalcStatements,
   .modal-contentIterationApps,
   .modal-contentCalcFunc {
-    width: 90%;
-    max-width: 600px;
-  }
-
-  .modal-contentArraysList {
-    width: 90%;
+    width: 95%;
     max-width: 400px;
   }
 
-  footer {
-    flex-direction: column;
-    align-items: center;
+  /* For smaller modal content */
+  .modal-contentArraysList {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  /* Ensure paragraph text wraps properly above modal */
+  p {
+    word-wrap: break-word;
+    overflow-wrap: break-word; /* Ensure long words break properly */
+    margin-bottom: 10px; /* Add some space below the paragraph */
+  }
+}
+
+/* Ensure the paragraph above the modal doesn't interfere with modal content */
+.modal-overlay.show p {
+  margin-bottom: 20px; /* Add more space below the paragraph when modal is shown */
+}
+
+/* Additional Modal Adjustments for Smaller Screens */
+@media (max-width: 300px) {
+  .modal-content,
+  .modal-contentAscii,
+  .modal-contentUserApps,
+  .modal-content-StringSplittingApps,
+  .modal-contentStatementsNLoops,
+  .modal-contentCalcStatements,
+  .modal-contentIterationApps,
+  .modal-contentCalcFunc {
+    width: 80%;
+    max-width: 350px; /* Reduce max-width for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  /* For even smaller modal content */
+  .modal-contentArraysList {
+    width: 85%;
+    max-width: 280px; /* Further reduce max-width for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 }
